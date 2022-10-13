@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
+
 }
 
 ol, ul {
@@ -57,6 +58,9 @@ table {
                         begin
 ============================================================= */
 
+* {
+    box-sizing: border-box;
+}
 
 h2 {
     font-size: 1.4em;
@@ -71,26 +75,9 @@ h5 {
     padding-bottom: 5px;
 }
 
-
-
-
-
-
-section {
-    margin: 30px auto;
-    background: rgb(241, 233, 223);
+header {
+    height: 10vh;
 }
-
-/* whole page */
-body {
-    background: rgb(200, 206, 204);
-    color: rgb(30, 31, 30);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: space-between;
-
-}
-
 
 .prob {
     color: orange;
@@ -104,15 +91,68 @@ body {
     color: rgb(24, 97, 24);
 }
 
+body {
+    background: rgb(200, 206, 204);
+}
+
+main, .kyu, .dropdown, .kyu>h3 {
+    display: flex;
+}
+
+/* whole page */
+main {
+    background: rgb(200, 206, 204);
+    color: rgb(30, 31, 30);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3%;
+    margin: auto 5vw;
+}
+
+section.kyu {
+    text-align: center;
+    margin: 30px auto;
+    background: rgb(241, 238, 233);
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-basis: 18vw;
+}
+
+.kyu>h3 {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 30px;
+    color: rgb(74, 216, 138);
+    background: rgb(116, 106, 106);
+    width: 100%;
+}
+
+
+
+
 /* dropdown */
+
 .dropdown {
     position: relative;
-    display: inline-block;
+    flex-basis: 30px;
+    justify-content: center;
+    width: 80%;
+    border-bottom: 1px solid rgb(160, 170, 160);
+}
+
+.dropdown.last {
+    border-bottom: none;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
+    left: 10vw;
+    top: -20px;
     background-color: #f9f9f9;
     min-width: 800px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -123,3 +163,18 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* dropdown from harirsalon? */
+/* input#boxCheck {
+    /*checkbox*/
+/* visibility: hidden; */
+
+
+
+/* input:checked~#dropDownItems {
+    display: flex;
+    flex-flow: column;
+    align-items: space-between;
+    justify-content: flex-start;
+    height: 200px;
+} */
