@@ -7,57 +7,175 @@
     <meta name="keywords" content="one, two, three">
 
     <title>codewars!</title>
-
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
     <!-- external CSS link -->
     <link rel="stylesheet" href="main.css">
 </head>
 
+
 <body>
+
     <header>
-        <p>Here is a list of the codewars challenges I have done. 1 each day :)</p>
-        <h5>8 kyu is the easiest level -------------->> 1 kyu is the hardest</h5>
+        <p>Breland's JavaScript codwars challenges</p>
+        <p><span>These <i class="fa-solid fa-star"></i></span>'s mean it's a working function, connected to
+            the
+            main.js
+            file. </p>
+        <p>The others are just pictures of my code and the code of the best voted solutions to track my
+            JavaScript learning</p>
+        <div class="containerForEasi">
+            <p class="easiestHardest">8 kyu -- easiest -------------->> 1 kyu -- hardest</p>
+        </div>
     </header>
     <main>
         <section class="kyu">
             <h3>8 kyu</h3>
-            <!-- <label for="boxCheck">&#9776;</label>
-        <input type="checkbox" id="boxCheck" />
-        <div class="dropDownItems" id="dropDownItems"> -->
 
+            <!------------------THIS IS A TEMPLATE -------------COPY AND PASTE IT---------------->
             <!-- <section class="dropdown">
-                <span class="date">10-14</span>
+                <span class="listItem">10-14</span>
                 <div class="dropdown-content">
-                    <h2>Title</h2>
-                    <h5 class="prob">Problem</h5>
-                    <p>Assignment goes here
+                    <h4 class="title">Title</h4>
+                    <p class="assignmentParagraph">Assignment goes here
 
                     </p>
                     <h5 class="solution">My Solution</h5>
-                    <img src="images/.png">
+                    <img src="images/10-1 mine.png">
                     <h5 class="best">Best Solution</h5>
-                    <img src="images/.png">
+                    <img src="images/10-1 sol.png">
+                </div>
             </section> -->
-            <section class="dropdown">
-                <span class="date">10-13</span>
+            <!------------------------------------------------------------------------------------------>
+            <!------------------THIS IS A TEMPLATE WITH A STAR *********** -------COPY AND PASTE IT---------------->
+            <!--           <section class="dropdown ya">
+                
+                <div><i class="fa-solid fa-star"></i></div>
+                <span class="listItem">10-13</span>
+                <div><i class="fa-solid fa-star spacer-hide"></i></div>
+               
+
                 <div class="dropdown-content">
-                    <h2>Double Each</h2>
-                    <h5 class="prob">Problem</h5>
-                    <p>Double each integer in an array
+                    <h4 class="title">Title</h4>
+                    <p class="assignmentParagraph">Assignment</p>
+                    <h5 class="tryIt">Try It Out</h5>
+                    <label for="inputName">Enter your first and last name</label>
+                    <input id="nameInput" type="text" autocomplete="off">
+                    <button id="nameConvertSpartan">CONVERT</button>
+                    <h5 class='result' id="nameConvertResult"></h5>
+
+                    <h5 class="solution">My Solution</h5>
+                    <img src="images/10-1mine.png">
+                    <h5 class="best">Best Solution</h5>
+                    <img src="images/10-1sol.png">
+                </div>
+            </section> -->
+            <!------------------------------------------------------------------------------------------>
+            <section class="dropdown ya">
+
+                <div><i class="fa-solid fa-star"></i></div>
+                <span class="listItem">10-14</span>
+                <div><i class="fa-solid fa-star spacer-hide"></i></div>
+
+
+                <div class="dropdown-content">
+                    <h4 class="title">Calculate Rental Cost</h4>
+                    <p class="assignmentParagraph">Rental car costs $40 per day. If you rent the car for 3
+                        or
+                        more days,
+                        you get $20 off your total. If you rent the car for 7 or
+                        more days,
+                        you get $50 off your total.</p>
+                    <h5 class="tryIt">Try It Out</h5>
+                    <label for="inputName">Enter days to rent car</label>
+                    <input id="rentalDaysInput" type="text" autocomplete="off">
+                    <button id="rentalConvertSpartan">SUBMIT</button>
+                    <h5 class='result' id="costOfRental"></h5>
+
+                    <h5 class="solution">My Solution</h5>
+                    <img src="images/10-14_2mine.png">
+                    <h5 class="best">Best Solution</h5>
+                    <img src="images/10-14_2sol.png">
+                </div>
+            </section>
+            <section class="dropdown">
+                <span class="listItem">10-14</span>
+                <div class="dropdown-content">
+
+                    <h4 class="title">Is element in array?</h4>
+                    <p class="assignmentParagraph">You will be given an array a and a value x. All you need
+                        to
+                        do is
+                        check whether the provided
+                        array contains the value.
+
+                        Array can contain numbers or strings. X can be either.
+
+                        Return true if the array contains the value, false if not.
+                    </p>
+                    <h5 class="solution">My Solution</h5>
+                    <img src="images/10-14mine.png">
+                    <h5 class="best">Best Solution</h5>
+                    <img src="images/10-14sol.png">
+                </div>
+            </section>
+            <section class="dropdown ya">
+                <!--This is a list entry with a star-->
+                <div><i class="fa-solid fa-star"></i></div>
+                <span class="listItem">10-13</span>
+                <div><i class="fa-solid fa-star spacer-hide"></i></div>
+                <!-- </end> -->
+
+                <div class="dropdown-content">
+                    <h4 class="title">Convert Name to Initials</h4>
+                    <p class="assignmentParagraph">Write a function to convert a name into initials. This
+                        kata
+                        strictly
+                        takes two words with
+                        one
+                        space in between them.
+                        The output should be two capital letters with a dot separating them.
+                        It should look like this:
+                        Sam Harris => S.H
+                        patrick feeney => P.F</p>
+                    <h5 class="tryIt">Try It Out</h5>
+                    <label for="inputName">Enter your first and last name</label>
+                    <input id="nameInput" type="text" autocomplete="off">
+                    <button id="nameConvertSpartan">CONVERT</button>
+                    <h5 class='result' id="nameConvertResult"></h5>
+
+                    <h5 class="solution">My Solution</h5>
+                    <img src="images/10-13_2mine.png">
+                    <h5 class="best">Best Solution</h5>
+                    <img src="images/10-13_2best.png">
+                </div>
+            </section>
+
+            <section class="dropdown">
+                <span class="listItem">10-13</span>
+                <div class="dropdown-content">
+                    <h4 class="title">Double Each</h4>
+                    <p class="assignmentParagraph">Double each integer in an array
 
                     </p>
                     <h5 class="solution">My Solution</h5>
                     <img src="images/10-13mine.png">
                     <h5 class="best">Best Solution</h5>
                     <img src="images/10-13best.png">
+                </div>
             </section>
 
 
             <section class="dropdown last">
-                <span class="date">10-12</span>
+                <span class="listItem">10-12</span>
                 <div class="dropdown-content">
-                    <h2>Enough Fuel Left?</h2>
-                    <h5 class="prob">Problem</h5>
-                    <p>Write a function that tells you if you have enough fuel to get to the gas station.
+                    <h4 class="title">Enough Fuel Left?</h4>
+                    <p class="assignmentParagraph">Write a function that tells you if you have enough fuel
+                        to
+                        get to the
+                        gas station.
 
                         Function should return true if it is possible and false if not.
 
@@ -66,6 +184,7 @@
                     <img src="images/10-12my.png">
                     <h5 class="best">Best Solution</h5>
                     <img src="images/10-12sol.png">
+                </div>
             </section>
 
         </section>
@@ -90,22 +209,15 @@
         <section class="kyu">
             <h3>1 kyu</h3>
         </section>
-        <!-- template --------------------------------------------------------------- -->
-        <!-- <section class="dropdown">
-                <span class="date">10-15</span>
-                <div class="dropdown-content">
-                    <h2>Title</h2>
-                    <h5 class="prob">Problem</h5>
-                    <p>Assignment goes here
 
-                    </p>
-                    <h5 class="solution">My Solution</h5>
-                    <img src="images/.png">
-                    <h5 class="best">Best Solution</h5>
-                    <img src="images/.png">
-            </section> -->
+
+        <!-- STARRRRRRRRRR <i class="fa-solid fa-star"></i> -->
     </main>
+
+    <script src="https://kit.fontawesome.com/aff5f1d5dc.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/10-14.js"></script>
 </body>
+
 
 </html>
