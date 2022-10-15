@@ -254,7 +254,15 @@ section.kyu {
     z-index: 1;
 }
 
+.dropdownDisplayJS {
+    display: block;
+}
+
 .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:focus .dropdown-content {
     display: block;
 }
 

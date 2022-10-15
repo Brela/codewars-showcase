@@ -27,3 +27,32 @@ function abbrevName() {
     document.querySelector('#nameConvertResult').innerText = ""
     document.querySelector('#nameConvertResult').innerText += ` ${firstNameLetter}.${lastNameLetter}`
 }
+
+//event listeners for dropdown
+
+/* 
+const buttons = document.querySelectorAll('.listItem')
+
+Array.from(buttons).forEach(element => element.addEventListener('click', displayBlock))
+
+function displayBlock() {
+    document.querySelector('.dropdown-content').classList.toggle('dropdownDisplayJS')
+
+} */
+
+/* var buttons = document.querySelectorAll('.listItem');
+
+for (var i = 0; i < buttons.length; i++) {
+    var self = buttons[i];
+
+    self.addEventListener('click', function (event) {
+        // prevent browser's default action
+        event.preventDefault();
+
+        // call your awesome function here
+        displayBlock(this); // 'this' refers to the current button on for loop
+    }, false);
+}
+function displayBlock() {
+    document.querySelector('.dropdown-content').classList.toggle('dropdownDisplayJS')
+} */
