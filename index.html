@@ -6,7 +6,7 @@
     <meta name="description" content="Your description goes here">
     <meta name="keywords" content="one, two, three">
 
-    <title>codewars!</title>
+    <title>Breland's codewars!</title>
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,26 @@
 <body>
 
     <header>
-        <p>Breland's JavaScript codwars challenges</p>
-        <p><span>These <i class="fa-solid fa-star"></i></span>'s mean it's a working function, connected to
-            the
-            main.js
-            file. </p>
-        <p>The others are just pictures of my code and the code of the best voted solutions to track my
-            JavaScript learning</p>
+        <label for="boxCheck">
+            <p><i id="fa-play" class="fa-solid fa-play"></i><i id="fa-caret-down" class="fa-solid "></i>
+                Breland's
+                JavaScript codwars
+                challenges</p>
+        </label>
+        <input type="checkbox" id="boxCheck" />
+        <div class="dropDownItems" id="dropDownItems">
+
+            <div>
+                <p><span>These <i class="fa-solid fa-star"></i></span>'s mean it's a working function, connected to
+                    the
+                    main.js
+                    file. </p>
+                <p>The others are just pictures of my code and the code of the best voted solutions to track my
+                    JavaScript learning</p>
+            </div>
+        </div>
         <div class="containerForEasi">
-            <p class="easiestHardest">8 kyu -- easiest -------------->> 1 kyu -- hardest</p>
+            <p class="easiestHardest">8 kyu -- easiest --------->> 1 kyu -- hardest</p>
         </div>
     </header>
     <main>
@@ -47,7 +58,7 @@
                     <h5 class="best">Best Solution</h5>
                     <img src="images/10-1 best.png">
                 </div>
-            </section> -->
+            </section>
             <!------------------------------------------------------------------------------------------>
             <!------------------THIS IS A TEMPLATE WITH A STAR *********** -------COPY AND PASTE IT---------------->
             <!--           <section class="dropdown ya">
@@ -74,6 +85,21 @@
             </section> -->
             <!------------------------------------------------------------------------------------------>
 
+            <section class="dropdown">
+                <span class="listItem">10-16</span>
+                <div class="dropdown-content">
+                    <h4 class="title">Find 'needle' in the Haystack</h4>
+                    <p class="assignmentParagraph">Write a function findNeedle() that takes an array full of junk but
+                        containing one "needle"<br>
+
+                        After your function finds the needle it should return a message (as a string) with the index.
+                    </p>
+                    <h5 class="solution">My Solution</h5>
+                    <img src="images/10-16mine.png">
+                    <h5 class="best">Best Solution</h5>
+                    <img src="images/10-16best.png">
+                </div>
+            </section>
             <section class="dropdown">
                 <span class="listItem">10-15</span>
                 <div class="dropdown-content">
@@ -232,7 +258,7 @@
 
     <script src="https://kit.fontawesome.com/aff5f1d5dc.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/10-15.js"></script>
+    <script type="text/javascript" src="js/10-16.js"></script>
 </body>
 
 

@@ -2,10 +2,7 @@
 //10-14 - days to rent car
 let rentalCostClick = document.querySelector('#rentalConvertSpartan')
 rentalCostClick.addEventListener('click', rentalCarCost)
-/* document.querySelector('#rentalDaysInput').addEventListener('keydown', (event) => {
-    if (event.key === "enter" || event.keyCode === 13) { // key code of the keybord key
-        return rentalCarCost()
-    }
+/*  
 }); */
 
 function rentalCarCost() {
@@ -27,6 +24,42 @@ function abbrevName() {
     document.querySelector('#nameConvertResult').innerText = ""
     document.querySelector('#nameConvertResult').innerText += ` ${firstNameLetter}.${lastNameLetter}`
 }
+
+//--------------- ^^^^^^^^^^^  beginning of daily entries ^^^^^^^^^^^^^^ -----------
+
+document.querySelector('#fa-play').addEventListener('click', caretDown)
+
+function caretDown() {
+    document.querySelector('#fa-caret-down').classList.add('.fa-caret-down')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //event listeners for dropdown
 

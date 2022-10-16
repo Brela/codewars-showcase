@@ -87,6 +87,27 @@ header {
     height: auto;
 }
 
+/*  dropdown  */
+input#boxCheck {
+    /* checkbox */
+    visibility: hidden;
+}
+
+.dropDownItems {
+    display: none;
+}
+
+.fa-caret-down.hidden {
+    display: none;
+}
+
+input:checked~#dropDownItems {
+    display: flex;
+    flex-flow: column;
+    align-items: space-between;
+    justify-content: flex-start;
+    height: auto;
+}
 
 img {
     width: 80%;
@@ -108,7 +129,7 @@ header .easiestHardest {
 }
 
 
-
+/*---------styles--------------*/
 .title {
     display: flex;
     align-items: center;
@@ -163,6 +184,11 @@ header .easiestHardest {
     font-size: .5em;
     display: flex;
     align-self: flex-start;
+}
+
+.fa-play {
+    font-size: .8rem;
+    padding-right: 10px;
 }
 
 /* this is to help space the list items, it uses a hidden star */
@@ -284,3 +310,39 @@ section.kyu {
     justify-content: flex-start;
     height: 200px;
 } */
+
+@media screen and (max-width: 1000px) {
+    header .easiestHardest {
+        width: 90%;
+        margin: auto 5%;
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    section.kyu {
+        text-align: center;
+        margin: 30px auto;
+        background: rgb(241, 238, 233);
+        height: 30vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        flex-basis: 18vw;
+    }
+
+    .kyu>h3 {
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 0;
+        margin-bottom: 10px;
+        height: 30px;
+        color: rgb(74, 235, 146);
+        background: rgb(116, 106, 106);
+        width: 100%;
+    }
+
+}
