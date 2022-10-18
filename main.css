@@ -123,6 +123,10 @@ img {
     width: 75%;
 }
 
+.img100 {
+    width: 100%;
+}
+
 .img60 {
     width: 67%;
 }
@@ -206,6 +210,10 @@ section.assignmentSmallerText {
     margin-top: 20px;
 }
 
+.marginTop {
+    margin-top: 10px;
+}
+
 .fa-star {
     color: orange;
     font-size: .5em;
@@ -234,6 +242,14 @@ button {
 
 button:hover {
     background: rgb(121, 223, 111);
+}
+
+.resetButton {
+    background: rgb(240, 210, 147);
+}
+
+.resetButton:hover {
+    background: rgb(247, 158, 42);
 }
 
 body {
