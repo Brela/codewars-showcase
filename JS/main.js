@@ -4,6 +4,44 @@ document.querySelector('button').addEventListener('click', function handleClick(
 });
 
 
+// ------------------            10-19 SORT WORDS        ------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
+//enter key eventListener
+document.querySelector('#addWordsHere').addEventListener('keypress', (event) => {
+    let keyCode = event.keyCode ? event.keyCode : event.which;
+    if (keyCode === 13) {
+        return addWords();
+    }
+});
+let arrWords = [];
+let wordInput = document.querySelector('#addWordsHere')
+
+//ARRAY TO BE SORTED, CREATED FROM WORDS ENTERED INTO INPUT
+document.querySelector('#addWordsButton').addEventListener('click', addWords)
+function addWords() {
+    let newWord = wordInput.value;
+    //this is where the numbers are added to the array (arrWords)
+    arrWords.push(` ${newWord}`)
+    document.querySelector('#unsortedWordsGoHere').innerText = arrWords;
+    wordInput.value = ""; //clearinput
+
+}
+
+//SORT ARRAY AND DISPLAY
+let sortedWords = 0;
+document.querySelector('#sortWordsButton').addEventListener('click', () => {
+
+    sortedWords = arrWords.sort((a, b) => a > b ? 1 : -1)
+
+    console.log(sortedWords)
+    document.querySelector('#sortedWordsGoHere').innerText = sortedWords
+});
+
+// CLEAR INPUTS WITH CLEAR BUTTON 
+document.querySelector('#clearWords').addEventListener('click', () => {
+    document.querySelector('#unsortedWordsGoHere').innerText = ""
+    document.querySelector('#sortedWordsGoHere').innerText = ""
+});
 // ------------------            10-18 sort nums        ------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------
 //enter key eventListener
