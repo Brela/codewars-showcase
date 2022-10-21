@@ -6,9 +6,8 @@ document.querySelector('button').addEventListener('click', function handleClick(
 
 // ------------------            10-20 Xs vs Os        ------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------
-//enter key eventListener
+//enter key eventListener for Xs Os
 let inputXsOs = document.querySelector('#enterXsOsString')
-
 inputXsOs.addEventListener('keypress', (event) => {
     let keyCode = event.keyCode ? event.keyCode : event.which;
     if (keyCode === 13) {
@@ -17,17 +16,16 @@ inputXsOs.addEventListener('keypress', (event) => {
 });
 
 //CHECK STRING FOR XS VS OS
-/* document.querySelector('#checkXoSringButton').addEventListener('click', resultXsVsOs)
-let stringXsOs = inputXsOs.value.toLowerCase()
-function resultXsVsOs() {
-    stringXsOs.forEach(el => el === x) { }
-    document.querySelector('#resultXsOsHere').innerText = resultXsVsOs;
+document.querySelector('#checkXoSringButton').addEventListener('click', resultXsVsOs)
+function checkXsOs() {
+    let stringXsOs = inputXsOs.value.toLowerCase().split('');
+    let resultXsOs = stringXsOs.filter(x => x === 'x').length === stringXsOs.filter(x => x === 'o').length ? 'true' : 'false';
+    document.querySelector('#resultXsOsHere').innerText = resultXsOs;
     inputXsOs.value = ""; //clearinput
-
-} */
+}
 
 // CLEAR INPUTS WITH CLEAR BUTTON 
-document.querySelector('#clearWords').addEventListener('click', () => {
+document.querySelector('#clearXsOs').addEventListener('click', () => {
     document.querySelector('#unsortedWordsGoHere').innerText = ""
     document.querySelector('#sortedWordsGoHere').innerText = ""
 });
