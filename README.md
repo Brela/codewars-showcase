@@ -1,4 +1,10 @@
 # codeWars
 Here are my daily codeWars challenges.
-The plan is to have a page on my portfolio with all of these on there, hence the images of my solution and the best practice solution.
-This will track my journey of learning JavaScript and other languages in the future.
+## notes
+The purpose of this is to track my journey of learning JavaScript and other languages in the future.<br>
+The live site for this will be a page on my portfolio
+## toDo
+* figure out layout
+* add JS click events for each list item
+
+Live Site: https://quiet-bienenstitch-3ad8ad.netlify.app/
