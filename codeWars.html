@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Your description goes here">
+    <meta name="keywords" content="one, two, three">
+
+    <title>Breland's codewars!</title>
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="home hidden">
+            HOME
+        </nav>
+        <section>
+            <h1>Breland's JavaScript Portfolio</h1>
+        </section>
+        <nav class="home">
+            HOME
+        </nav>
+
+    </header>
+    <main>
+        <section class="kyuVerticalContainer">
+            <section>
+
+                <label for="boxCheck">
+                    <p><i id="fa-play" class="fa-solid fa-play"></i><i id="fa-caret-down" class="fa-solid "></i>
+                        JavaScript codwars challenges</p>
+                </label>
+                <input type="checkbox" id="boxCheck" />
+
+
+                <div class="dropDownItems close" id="dropDownItems">
+
+
+                    <div class="XtoCloseContainer" id="closeBox">
+                        <label for="boxCheck2">
+                            <i class="fa-regular fa-rectangle-xmark"></i>
+                        </label>
+                        <input type="checkbox" id="boxCheck2" />
+                    </div>
+
+                    <p><span>These <i class="fa-solid fa-star"></i></span>'s mean it's a working function, connected
+                        to
+                        the
+                        main.js
+                        file. </p>
+                    <p class="centerText">The others are pictures of my code and<br> the best voted solutions to
+                        track my
+                        JavaScript learning</p>
+                    <div class="containerForEasi">
+                        <p id="easiestHardest">8 kyu -- easiest --------->> 1 kyu -- hardest</p>
+                    </div>
+                </div>
+            </section>
+            <section class="kyu">
+                <h3>8 kyu</h3>
+
+                <!------------------THIS IS A TEMPLATE -------------COPY AND PASTE IT---------------->
+                <!-- <section class="dropdown">
+                <span class="listItem">10-14</span>
+                <div class="dropdown-content">
+                    <h4 class="title">Title</h4>
+                    <p class="assignmentParagraph">Assignment goes here
+
+                    </p>
+                    <h5 class="solution">My Solution</h5>
+                    <img class="" src="images/10-2mine.png" alt="picture of code">
+                    <h5 class="best">Best Solution</h5>
+                    <img class="" src="images/10-2best.png" alt="picture of code">
+                </div>
+            </section>
+            ---------------------------------------------------------------------------------------->
+                <!------------------THIS IS A TEMPLATE WITH A STAR *********** -------COPY AND PASTE IT---------------->
+                <!--           <section class="dropdown ya">
+                
+                <div><i class="fa-solid fa-star"></i></div>
+                <span class="listItem">10-13</span>
+                <div><i class="fa-solid fa-star spacer-hide"></i></div>
+               
+                <div class="dropdown-content">
+                    <h4 class="title">Title</h4>
+                    <p class="assignmentParagraph">Assignment</p>
+                    <h5 class="tryIt">Try It Out</h5>
+                    <label for="inputName">Enter your first and last name</label>
+                    <input id="nameInput" type="text" autocomplete="off">
+                    <button id="nameConvertSpartan">CONVERT</button>
+                    <h5 class='result' id="nameConvertResult"></h5>
+
+                    <h5 class="solution">My Solution</h5>
+                    <img class="" src="images/10-20mine.png" alt="picture of code">
+                    <h5 class="best">Best Solution</h5>
+                    <img class="" src="images/10-20best.png" alt="picture of code">
+                </div>
+            </section> -->
+                <!--IMG defalut size is 75
+            Options: bigger img100
+                     smaller img65 or img50-->
+                <script type="text/javascript" src="js/dailyJScode/10-20.js"></script>
+                <!------------------------------------------------------------------------------------------>
+
+
+                <section id="c10-19" class="dropdown ">
+
+                    <div><i class="fa-solid fa-star"></i></div>
+                    <span class="listItem">10-19</span>
+                    <div><i class="fa-solid fa-star spacer-hide"></i></div>
+
+
+                    <div id="o10-19" class="dropdown-content o10-19">
+                        <h4 class="title">Enter Words and Sort</h4>
+                        <p class="assignmentParagraph">*this is my variation of a 100Devs assignment*<br>
+                            Allow user to add in <span class="bold">words</span> to create an array. Then, sort the
+                            words in alphabetical order when the sort button is clicked.</p>
+                        <h5 class="tryIt">Try It Out</h5>
+
+                        <label for="addWordsHere">Enter numbers 1 at a time</label>
+                        <input id="addWordsHere" type="text" autocomplete="off">
+                        <button id="addWordsButton">ADD</button>
+                        <button id="sortWordsButton">SORT</button>
+                        <h5 class='result' id="unsortedWordsGoHere"></h5>
+                        <h5 class='result' id="sortedWordsGoHere"></h5>
+                        <button class="marginTop resetButton" id="clearWords">RESET</button>
+                        <h5 class="solution">My Solution</h5>
+                        <img class='img100' src="images/10-19mine.png">
+
+                    </div>
+                </section>
+                <section id="c10-18" class="dropdown">
+
+                    <div><i class="fa-solid fa-star"></i></div>
+                    <span class="listItem">10-18</span>
+                    <div><i class="fa-solid fa-star spacer-hide"></i></div>
+
+                    <div class="dropdown-content o10-18">
+                        <h4 class="title">Enter Numbers and Sort</h4>
+                        <p class="assignmentParagraph">*this is my variation of a 100Devs assignment*<br>
+                            Allow user to add in <span class="bold">numbers</span> to create an array. Then, sort the
+                            numbers when the sort button is clicked.</p>
+                        <h5 class="tryIt">Try It Out</h5>
+
+                        <label for="addNumsHere">Enter numbers 1 at a time</label>
+                        <input id="addNumsHere" type="text" autocomplete="off">
+                        <button id="addNumsButton">ADD</button>
+                        <button id="sortNumsButton">SORT</button>
+                        <h5 class='result' id="unsortedNumsGoHere"></h5>
+                        <h5 class='result' id="sortedNumsGoHere"></h5>
+                        <button class="marginTop resetButton" id="clearNums">RESET</button>
+                        <h5 class="solution">My Solution</h5>
+                        <img class='img100' src="images/10-18mine.png">
+
+                    </div>
+                </section>
+                <section id="c10-17" class="dropdown">
+                    <span class="listItem">10-17</span>
+
+                    <div class="dropdown-content o10-17">
+                        <h4 class="title">Cat and Dog Years</h4>
+                        <p class="assignmentParagraph ">An owner got cat and dog at the same time as
+                            kitten/puppy. That was
+                            humanYears years ago.<br>
+                            Return their respective ages now as [humanYears,catYears,dogYears]<br>
+                        <section class="assignmentSmallerText">
+                            <div>
+                                Cat Years<br>
+                                15 cat years for first year<br>
+                                + 9 cat years for second year<br>
+                                + 4 cat years for each year after that<br>
+                            </div>
+                            <div>
+                                Dog Years<br>
+                                15 dog years for first year<br>
+                                + 9 dog years for second year<br>
+                                + 5 dog years for each year after that
+                            </div>
+                        </section>
+                        </p>
+                        <h5 class="solution">My Solution</h5>
+                        <img class="img60" src="images/10-17mine.png">
+                        <h5 class="best">Best Solution</h5>
+                        <img class="img60" src="images/10-17best.png">
+                    </div>
+                </section>
+                <section class="dropdown">
+                    <span class="listItem">10-16</span>
+                    <div class="dropdown-content">
+                        <h4 class="title">Find 'needle' in the Haystack</h4>
+                        <p class="assignmentParagraph">Write a function findNeedle() that takes an array full of junk
+                            but
+                            containing one "needle"<br>
+
+                            After your function finds the needle it should return a message (as a string) with the
+                            index.
+                        </p>
+                        <h5 class="solution">My Solution</h5>
+                        <img src="images/10-16mine.png">
+                        <h5 class="best">Best Solution</h5>
+                        <img src="images/10-16best.png">
+                    </div>
+                </section>
+                <section class="dropdown">
+                    <span class="listItem">10-15</span>
+                    <div class="dropdown-content">
+                        <h4 class="title">Fixing Bot's Letter Input Errors</h4>
+                        <p class="assignmentParagraph">
+                            This digitised character
+                            recognition software made some mistakes.
+
+                            Your task is to correct the errors in the digitised text. You only have to handle the
+                            following
+                            mistakes:<br>
+
+                            I is misinterpreted as 1<br>
+                            O is misinterpreted as 0(zero)<br>
+                            S is misinterpreted as 5
+                        </p>
+                        <h5 class="solution">My Solution</h5>
+                        <img src="images/10-15mine.png">
+                        <h5 class="best">Best Solution</h5>
+                        <img src="images/10-15best.png">
+                    </div>
+                </section>
+                <section id="listItem" class="dropdown ya">
+
+                    <div><i class="fa-solid fa-star"></i></div>
+                    <span class="listItem">10-14</span>
+                    <div><i class="fa-solid fa-star spacer-hide"></i></div>
+
+
+                    <div class="dropdown-content">
+                        <h4 class="title">Calculate Rental Cost</h4>
+                        <p class="assignmentParagraph">Rental car costs $40 per day. If you rent the car for 3
+                            or
+                            more days,
+                            you get $20 off your total. If you rent the car for 7 or
+                            more days,
+                            you get $50 off your total.</p>
+                        <h5 class="tryIt">Try It Out</h5>
+                        <label for="inputName">Enter days to rent car</label>
+                        <input id="rentalDaysInput" type="text" autocomplete="off">
+                        <button id="rentalConvertSpartan">SUBMIT</button>
+                        <h5 class='result' id="costOfRental"></h5>
+
+                        <h5 class="solution">My Solution</h5>
+                        <img src="images/10-14_2mine.png">
+                        <h5 class="best">Best Solution</h5>
+                        <img src="images/10-14_2sol.png">
+                    </div>
+                </section>
+                <section class="dropdown">
+                    <span class="listItem">10-14</span>
+                    <div class="dropdown-content">
+
+                        <h4 class="title">Is element in array?</h4>
+                        <p class="assignmentParagraph">You will be given an array a and a value x. All you need
+                            to
+                            do is
+                            check whether the provided
+                            array contains the value.
+
+                            Array can contain numbers or strings. X can be either.
+
+                            Return true if the array contains the value, false if not.
+                        </p>
+                        <h5 class="solution">My Solution</h5>
+                        <img src="images/10-14mine.png">
+                        <h5 class="best">Best Solution</h5>
+                        <img src="images/10-14sol.png">
+                    </div>
+                </section>
+                <section class="dropdown ya">
+                    <!--This is a list entry with a star-->
+                    <div><i class="fa-solid fa-star"></i></div>
+                    <span class="listItem">10-13</span>
+                    <div><i class="fa-solid fa-star spacer-hide"></i></div>
+                    <!-- </end> -->
+
+                    <div class="dropdown-content">
+                        <h4 class="title">Convert Name to Initials</h4>
+                        <p class="assignmentParagraph">Write a function to convert a name into initials. This kata
+                            strictly
+                            takes two words with one space in between them.
+                            The output should be two capital letters with a dot separating them. It should look like
+                            this:
+                            Jack Briarland => L.B || Erling Haaland => E.H</p>
+                        <h5 class="tryIt">Try It Out</h5>
+                        <label for="inputName">Enter your first and last name</label>
+                        <input id="nameInput" type="text" autocomplete="off">
+                        <button id="nameConvertSpartan">CONVERT</button>
+                        <h5 class='result' id="nameConvertResult"></h5>
+
+                        <h5 class="solution">My Solution</h5>
+                        <img src="images/10-13_2mine.png">
+                        <h5 class="best">Best Solution</h5>
+                        <img src="images/10-13_2best.png">
+                    </div>
+                </section>
+
+                <section class="dropdown">
+                    <span class="listItem">10-13</span>
+                    <div class="dropdown-content">
+                        <h4 class="title">Double Each</h4>
+                        <p class="assignmentParagraph">Double each integer in an array
+
+                        </p>
+                        <h5 class="solution">My Solution</h5>
+                        <img src="images/10-13mine.png">
+                        <h5 class="best">Best Solution</h5>
+                        <img src="images/10-13best.png">
+                    </div>
+                </section>
+
+
+                <section class="dropdown last">
+                    <span class="listItem">10-12</span>
+                    <div class="dropdown-content">
+                        <h4 class="title">Enough Fuel Left?</h4>
+                        <p class="assignmentParagraph">Write a function that tells you if you have enough fuel
+                            to
+                            get to the
+                            gas station.
+
+                            Function should return true if it is possible and false if not.
+
+                        </p>
+                        <h5 class="solution">My Solution</h5>
+                        <img src="images/10-12my.png">
+                        <h5 class="best">Best Solution</h5>
+                        <img src="images/10-12sol.png">
+                    </div>
+                </section>
+
+            </section>
+            <section class="kyu">
+                <h3>7 kyu</h3>
+                <section class="dropdown ya">
+
+                    <div><i class="fa-solid fa-star"></i></div>
+                    <span class="listItem">10-20</span>
+                    <div><i class="fa-solid fa-star spacer-hide"></i></div>
+
+                    <div class="dropdown-content">
+                        <h4 class="title">X's vs O's</h4>
+                        <p class="assignmentParagraph">Check to see if a string has the same amount of 'x's and
+                            'o's.
+                            The method must return a boolean and be case insensitive. The string can contain any char.
+                        </p>
+                        <h5 class="tryIt">Try It Out</h5>
+                        <label for="enterXsOsString">Enter a string (word) with Xs and Os</label>
+                        <input id="enterXsOsString" type="text" autocomplete="off">
+                        <button id="checkXoSringButton">CHECK</button>
+                        <h5 class='result' id="resultXsOsHere"></h5>
+
+                        <h5 class="solution">My Solution</h5>
+                        <img src="images/10-20mine.png" alt="picture of code">
+                        <h5 class="best">Best Solution</h5>
+                        <img class="img100" src="images/10-20best.png" alt="picture of code">
+                    </div>
+                </section>
+            </section>
+            <section class="kyu">
+                <div class="transparentGreyOverlay">
+                    <h3>6 kyu</h3>
+                    <p class="comingSoon">coming soon 🚀</p>
+                </div>
+            </section>
+            <section class="kyu">
+                <div class="transparentGreyOverlay">
+                    <h3>5 kyu</h3>
+                    <p class="comingSoon">coming soon 🚀</p>
+                </div>
+            </section>
+            <section class="kyu">
+                <div class="transparentGreyOverlay">
+                    <h3>4 kyu</h3>
+                    <p class="comingSoon">coming soon 🚀</p>
+                </div>
+            </section>
+            <section class="kyu">
+                <div class="transparentGreyOverlay">
+                    <h3>3 kyu</h3>
+                    <p class="comingSoon">coming soon 🚀</p>
+                </div>
+            </section>
+            <section class="kyu">
+                <div class="transparentGreyOverlay">
+                    <h3>2 kyu</h3>
+                    <p class="comingSoon">coming soon 🚀</p>
+                </div>
+            </section>
+            <section class="kyu">
+                <div class="transparentGreyOverlay">
+                    <h3>1 kyu</h3>
+                    <p class="comingSoon">coming soon 🚀</p>
+                </div>
+            </section>
+        </section> <!--   end of kyuVerticalContainer  -->
+
+        <section class="miniAppsContainer">
+            <section>
+
+                <label for="boxCheck">
+                    <p><i id="fa-play" class="fa-solid fa-play"></i><i id="fa-caret-down" class="fa-solid "></i>
+                        JavaScript codwars challenges</p>
+                </label>
+                <input type="checkbox" id="boxCheck" />
+
+
+                <div class="dropDownItems close" id="dropDownItems">
+
+
+                    <div class="XtoCloseContainer" id="closeBox">
+                        <label for="boxCheck2">
+                            <i class="fa-regular fa-rectangle-xmark"></i>
+                        </label>
+                        <input type="checkbox" id="boxCheck2" />
+                    </div>
+                    <p>Mini Apps</p>
+                    <p><span>These <i class="fa-solid fa-star"></i></span>'s mean</p>
+                    <p class="centerText"></p>
+                </div>
+            </section>
+
+
+            <!-- <div class="displayDailySolutionContainer">
+
+        </div> -->
+
+            <!-- STARRRRRRRRRR <i class="fa-solid fa-star"></i> -->
+    </main>
+
+    <script src="https://kit.fontawesome.com/aff5f1d5dc.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+
+</html>

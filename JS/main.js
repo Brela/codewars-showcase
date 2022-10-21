@@ -4,6 +4,33 @@ document.querySelector('button').addEventListener('click', function handleClick(
 });
 
 
+// ------------------            10-20 Xs vs Os        ------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
+//enter key eventListener
+let inputXsOs = document.querySelector('#enterXsOsString')
+
+inputXsOs.addEventListener('keypress', (event) => {
+    let keyCode = event.keyCode ? event.keyCode : event.which;
+    if (keyCode === 13) {
+        return checkXsOs();
+    }
+});
+
+//CHECK STRING FOR XS VS OS
+/* document.querySelector('#checkXoSringButton').addEventListener('click', resultXsVsOs)
+let stringXsOs = inputXsOs.value.toLowerCase()
+function resultXsVsOs() {
+    stringXsOs.forEach(el => el === x) { }
+    document.querySelector('#resultXsOsHere').innerText = resultXsVsOs;
+    inputXsOs.value = ""; //clearinput
+
+} */
+
+// CLEAR INPUTS WITH CLEAR BUTTON 
+document.querySelector('#clearWords').addEventListener('click', () => {
+    document.querySelector('#unsortedWordsGoHere').innerText = ""
+    document.querySelector('#sortedWordsGoHere').innerText = ""
+});
 // ------------------            10-19 SORT WORDS        ------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------
 //enter key eventListener
@@ -33,7 +60,7 @@ document.querySelector('#sortWordsButton').addEventListener('click', () => {
 
     sortedWords = arrWords.sort((a, b) => a > b ? 1 : -1)
 
-    console.log(sortedWords)
+
     document.querySelector('#sortedWordsGoHere').innerText = sortedWords
 });
 
@@ -71,7 +98,7 @@ function addNums() {
 let sortedNums = 0;
 document.querySelector('#sortNumsButton').addEventListener('click', () => {
     sortedNums = arrX.sort((a, b) => a - b)
-    console.log(sortedNums)
+
     document.querySelector('#sortedNumsGoHere').innerText = sortedNums
 });
 
@@ -131,11 +158,36 @@ function abbrevName() {
 
 //--------------- ^^^^^^^^^^^  beginning of daily entries ^^^^^^^^^^^^^^ -----------
 
+//        page layout functions below
+//     this is fot the caret dropdown, doesn't work yet
 document.querySelector('#fa-play').addEventListener('click', caretDown)
 
 function caretDown() {
     document.querySelector('#fa-caret-down').classList.add('.fa-caret-down')
 }
+
+//this is to close the codewars description block
+
+// document.querySelector('#closeBox').addEventListener(('click', () => {
+//     document.querySelector('#dropDownItems').classList.toggle
+// }))
+
+//this is to make the solution's content appear in container upon click
+document.querySelector('#c10-19').addEventListener('click', () => {
+    document.querySelectorAll('.dropdown-content').classList.add('dropdown-content-unstick')
+    document.querySelector('.o10-19').classList.add('dropdown-content-stick', 'stay')
+})
+
+document.querySelector('#c10-18').addEventListener('click', () => {
+    document.querySelectorAll('.dropdown-content').classList.add('dropdown-content-unstick')
+    document.querySelector('.o10-18').classList.add('dropdown-content-stick', 'stay')
+})
+
+document.querySelector('#c10-17').addEventListener('click', () => {
+    document.querySelectorAll('.dropdown-content').classList.add('dropdown-content-unstick')
+    document.querySelector('.o10-17').classList.add('dropdown-content-stick', 'stay')
+})
+
 
 
 
@@ -184,7 +236,7 @@ const buttons = document.querySelectorAll('.listItem')
 Array.from(buttons).forEach(element => element.addEventListener('click', displayBlock))
 
 function displayBlock() {
-    document.querySelector('.dropdown-content').classList.toggle('dropdownDisplayJS')
+    document.querySelector('.dropdown-content').classList.toggle('dropdown-content-unstick')
 
 } */
 
@@ -202,5 +254,5 @@ for (var i = 0; i < buttons.length; i++) {
     }, false);
 }
 function displayBlock() {
-    document.querySelector('.dropdown-content').classList.toggle('dropdownDisplayJS')
+    document.querySelector('.dropdown-content').classList.toggle('dropdown-content-unstick')
 } */
