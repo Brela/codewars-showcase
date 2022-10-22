@@ -4,8 +4,9 @@ document.querySelector('button').addEventListener('click', function handleClick(
 });
 
 
-// ------------------            10-20 Xs vs Os        ------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------
+// ------------------            10-20 Xs vs Os        ----------------------------------------------------
+
 //enter key eventListener for Xs Os
 let inputXsOs = document.querySelector('#enterXsOsString')
 inputXsOs.addEventListener('keypress', (event) => {
@@ -29,8 +30,10 @@ document.querySelector('#clearXsOs').addEventListener('click', () => {
     document.querySelector('#unsortedWordsGoHere').innerText = ""
     document.querySelector('#sortedWordsGoHere').innerText = ""
 });
-// ------------------            10-19 SORT WORDS        ------------------------------------------------------------------
+
 //--------------------------------------------------------------------------------------------
+// ------------------            10-19 SORT WORDS        -------------------------------------
+
 //enter key eventListener
 document.querySelector('#addWordsHere').addEventListener('keypress', (event) => {
     let keyCode = event.keyCode ? event.keyCode : event.which;
@@ -67,8 +70,10 @@ document.querySelector('#clearWords').addEventListener('click', () => {
     document.querySelector('#unsortedWordsGoHere').innerText = ""
     document.querySelector('#sortedWordsGoHere').innerText = ""
 });
-// ------------------            10-18 sort nums        ------------------------------------------------------------------
+
 //--------------------------------------------------------------------------------------------
+// ------------------            10-18 sort nums        ----------------------------------------
+
 //enter key eventListener
 document.querySelector('#addNumsHere').addEventListener('keypress', (event) => {
     let keyCode = event.keyCode ? event.keyCode : event.which;
@@ -109,8 +114,10 @@ document.querySelector('#clearNums').addEventListener('click', () => {
 
 
 
-//10-// ------------------            10-14 days to rent car        ------------------------------------------------------------------
+
 //--------------------------------------------------------------------------------------------
+// ------------------            10-14 days to rent car        ---------------------------
+
 let rentalCostClick = document.querySelector('#rentalConvertSpartan')
 rentalCostClick.addEventListener('click', rentalCarCost)
 
@@ -132,8 +139,9 @@ function rentalCarCost() {
     document.querySelector('#costOfRental').innerText += `$${costOfRental}`
 }
 
-// ------------------            10-13 convert name to initials       ------------------------------------------------------------------
+
 //--------------------------------------------------------------------------------------------
+// ------------------            10-13 convert name to initials       ------------------------
 
 document.querySelector('#nameConvertSpartan').addEventListener('click', abbrevName)
 document.querySelector('#nameInput').addEventListener('keypress', (event) => {
@@ -170,10 +178,18 @@ function caretDown() {
 //     document.querySelector('#dropDownItems').classList.toggle
 // }))
 
-//this is to make the solution's content appear in container upon click
+//--------        this is to make the solution's content appear in container upon click      -------------- 
+
+document.querySelector('#testJS').addEventListener('click', tester)
+function tester() {
+    // document.querySelectorAll('.dropdown-content').classList.add('dropdown-content-unstick')
+    document.querySelector('body').classList.toggle('blueTest')
+    document.querySelector('#o10-20').classList.toggle('dropdown-content')
+}
+
 document.querySelector('#c10-19').addEventListener('click', () => {
-    document.querySelectorAll('.dropdown-content').classList.add('dropdown-content-unstick')
-    document.querySelector('.o10-19').classList.add('dropdown-content-stick', 'stay')
+    // document.querySelectorAll('.dropdown-content').classList.add('dropdown-content-unstick')
+    document.querySelector('#o10-19').classList.add('dropdown-content-stick', 'stay')
 })
 
 document.querySelector('#c10-18').addEventListener('click', () => {

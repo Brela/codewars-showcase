@@ -409,6 +409,8 @@ section.kyu {
     z-index: 4;
 }
 
+
+/* dropdown with js */
 .dropdown-content-unstick {
     display: none;
 }
@@ -417,6 +419,9 @@ section.kyu {
     display: block;
 }
 
+.blueTest {
+    background: blue;
+}
 
 
 
