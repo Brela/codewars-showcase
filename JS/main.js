@@ -17,7 +17,7 @@ inputXsOs.addEventListener('keypress', (event) => {
 });
 
 //CHECK STRING FOR XS VS OS
-document.querySelector('#checkXoSringButton').addEventListener('click', resultXsVsOs)
+document.querySelector('#checkXoSringButton').addEventListener('click', checkXsOs)
 function checkXsOs() {
     let stringXsOs = inputXsOs.value.toLowerCase().split('');
     let resultXsOs = stringXsOs.filter(x => x === 'x').length === stringXsOs.filter(x => x === 'o').length ? 'true' : 'false';
@@ -26,11 +26,11 @@ function checkXsOs() {
 }
 
 // CLEAR INPUTS WITH CLEAR BUTTON 
-document.querySelector('#clearXsOs').addEventListener('click', () => {
+/* document.querySelector('#clearXsOs').addEventListener('click', () => {
     document.querySelector('#unsortedWordsGoHere').innerText = ""
     document.querySelector('#sortedWordsGoHere').innerText = ""
 });
-
+ */
 //--------------------------------------------------------------------------------------------
 // ------------------            10-19 SORT WORDS        -------------------------------------
 
@@ -172,35 +172,54 @@ function caretDown() {
     document.querySelector('#fa-caret-down').classList.add('.fa-caret-down')
 }
 
-//this is to close the codewars description block
 
-// document.querySelector('#closeBox').addEventListener(('click', () => {
-//     document.querySelector('#dropDownItems').classList.toggle
-// }))
 
-//--------        this is to make the solution's content appear in container upon click      -------------- 
+//-----------------------------------------------------------------------------------------------------------
+//--------        this is for making each list item DISPLAY content upon click   AKA:  STICK   -------------- 
+//-------------------------------------------------------------------------------------------------------------
 
-document.querySelector('#testJS').addEventListener('click', tester)
-function tester() {
-    // document.querySelectorAll('.dropdown-content').classList.add('dropdown-content-unstick')
-    document.querySelector('body').classList.toggle('blueTest')
-    document.querySelector('#o10-20').classList.toggle('dropdown-content')
+// ------------           testing          -------------
+/* const contestants = document.querySelectorAll('.contestant')
+Array.from(contestants).forEach(element => element.addEventListener('click', checkForRose))
+
+function checkForRose(click) {
+    if (click.target.classList.contains('rose')) {
+        document.querySelector('#nikki').classList.toggle('hidden')
+    } else
+        alert('wrong')
 }
+ */
+/*    this is a start for making each item display it's own contents for its click 
+const checkFor_Stick_list= document.querySelectorAll('.dropdown-content')
+Array.from(checkFor_Stick_list).forEach(el => el.addEventListener('click', checkForStick)
+function checkForStick(click) {
+    if (click.target.classList.contains('stick')) {
+        document.querySelector('').classList.toggle('stick')
+    } else
+} */
 
-document.querySelector('#c10-19').addEventListener('click', () => {
-    // document.querySelectorAll('.dropdown-content').classList.add('dropdown-content-unstick')
-    document.querySelector('#o10-19').classList.add('dropdown-content-stick', 'stay')
+const checkFor_Stick_list = document.querySelectorAll('.dropdown-content')
+function clearStick() {
+    Array.from(checkFor_Stick_list).forEach(el => function () {
+        el.classList.remove(stick)
+    })
+}
+// ----------------------------
+document.querySelector('#a10-21').addEventListener('click', () => {
+    // when I add this the next line stops working
+    // document.querySelectorAll('.dropdown-content').classList.remove(stick)
+
+    document.querySelector('.x10-21').classList.toggle('stick')
+})
+document.querySelector('#a10-20').addEventListener('click', () => {
+    // document.querySelectorAll('.dropdown-content').classList.remove(stick)
+    document.querySelector('.x10-20').classList.toggle('stick')
+})
+document.querySelector('#a10-19').addEventListener('click', () => {
+    clearStick()
+    document.querySelector('.x10-19').classList.toggle('stick')
 })
 
-document.querySelector('#c10-18').addEventListener('click', () => {
-    document.querySelectorAll('.dropdown-content').classList.add('dropdown-content-unstick')
-    document.querySelector('.o10-18').classList.add('dropdown-content-stick', 'stay')
-})
-
-document.querySelector('#c10-17').addEventListener('click', () => {
-    document.querySelectorAll('.dropdown-content').classList.add('dropdown-content-unstick')
-    document.querySelector('.o10-17').classList.add('dropdown-content-stick', 'stay')
-})
 
 
 

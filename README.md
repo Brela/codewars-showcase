@@ -7,18 +7,28 @@ The live site for this will be a page on my portfolio
 * figure out layout
 * add JS click events for each list item
 
-Live Site: https://quiet-bienenstitch-3ad8ad.netlify.app/
+Live Site: https://brela-codewars.netlify.app/
 
 # timeline
+
+## week 10-23-2022
+### added entries:
+*
+## ++
+*
+
 ## week 10-17-2022
 ### added entries:
-* 10-20 X's vs Os
+* 10-22 Still trying to figure out adding "display: block" to an item and removing that class from the rest at the same time
+* 10-20 X's vs Os 
 * 10-19 Enter Words and Sort
 * 10-18 Enter numbers and sort
 * 10-17 Cat and Dog Years Conversion 
 ### ++
 * still working on layout
 * first 7kyu codeWars challenge!
+Spent many hours trying to figure out displaying each daily entry; I found the problem was shown on the console (that a variabloe was already declared because I forgot to unlink my test JS file) 
+* always check the console for any problems
 
 
 
