@@ -19,6 +19,7 @@ Live Site: https://brela-codewars.netlify.app/
 
 ## week 10-17-2022
 ### added entries:
+* 10-23 Got it to work! Items now toggle upon click of their list item - see 10-23 on website or in 10-23.js for code behind it. Need to fix :hover to display preview of item
 * 10-22 Still trying to figure out adding "display: block" to an item and removing that class from the rest at the same time
 * 10-20 X's vs Os 
 * 10-19 Enter Words and Sort
