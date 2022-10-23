@@ -69,6 +69,7 @@ document.querySelector('#sortWordsButton').addEventListener('click', () => {
 document.querySelector('#clearWords').addEventListener('click', () => {
     document.querySelector('#unsortedWordsGoHere').innerText = ""
     document.querySelector('#sortedWordsGoHere').innerText = ""
+    arrWords = []
 });
 
 //--------------------------------------------------------------------------------------------
@@ -109,6 +110,7 @@ document.querySelector('#sortNumsButton').addEventListener('click', () => {
 document.querySelector('#clearNums').addEventListener('click', () => {
     document.querySelector('#unsortedNumsGoHere').innerText = ""
     document.querySelector('#sortedNumsGoHere').innerText = ""
+    arrX = []
 });
 
 
@@ -166,78 +168,64 @@ function abbrevName() {
 
 //        page layout functions below
 //     this is fot the caret dropdown, doesn't work yet
-document.querySelector('#fa-play').addEventListener('click', caretDown)
-
-function caretDown() {
-    document.querySelector('#fa-caret-down').classList.add('.fa-caret-down')
+/* document.querySelector('#fa-play').onmouseenter = () => {
+    document.querySelector('#fa-caret-down').classList.add('fa-caret-down')
 }
+document.querySelector('#fa-play').addEventListener('click', () => {
+    document.querySelector('#fa-caret-down').classList.add('fa-caret-down')
+})
+ */
 
+//===========================================================================================================
 
+//--------        this section is for making each list item DISPLAY content upon click   AKA:  STICK   -------------- 
 
-//-----------------------------------------------------------------------------------------------------------
-//--------        this is for making each list item DISPLAY content upon click   AKA:  STICK   -------------- 
 //-------------------------------------------------------------------------------------------------------------
 
-// ------------           testing          -------------
-/* const contestants = document.querySelectorAll('.contestant')
-Array.from(contestants).forEach(element => element.addEventListener('click', checkForRose))
 
-function checkForRose(click) {
-    if (click.target.classList.contains('rose')) {
-        document.querySelector('#nikki').classList.toggle('hidden')
-    } else
-        alert('wrong')
-}
- */
-/*    this is a start for making each item display it's own contents for its click 
-const checkFor_Stick_list= document.querySelectorAll('.dropdown-content')
-Array.from(checkFor_Stick_list).forEach(el => el.addEventListener('click', checkForStick)
-function checkForStick(click) {
-    if (click.target.classList.contains('stick')) {
-        document.querySelector('').classList.toggle('stick')
-    } else
-} */
 
-const checkFor_Stick_list = document.querySelectorAll('.dropdown-content')
-function clearStick() {
-    Array.from(checkFor_Stick_list).forEach(el => function () {
-        el.classList.remove(stick)
-    })
-}
-// ----------------------------
-document.querySelector('#a10-21').addEventListener('click', () => {
-    // when I add this the next line stops working
-    // document.querySelectorAll('.dropdown-content').classList.remove(stick)
-
+// EACH OF THESE DISPLAYS IT'S ITEM, I WOULD LIKE TO FIND A WAY TO MAKE ONE FUNCTION THAT CREATES AN ARRY
+//FOR THESE AND ALLOW EACH ARRAY ITEM TO DISPLAY ITS OWN ITEM
+//-----------------------------------------------------------------------------------------------------
+/* document.querySelector('#a10-21').addEventListener('click', () => {
+  
+    clearStick()
     document.querySelector('.x10-21').classList.toggle('stick')
-})
-document.querySelector('#a10-20').addEventListener('click', () => {
-    // document.querySelectorAll('.dropdown-content').classList.remove(stick)
+}) */
+/* document.querySelector('#a10-20').addEventListener('click', () => {
+    clearStick()
     document.querySelector('.x10-20').classList.toggle('stick')
 })
 document.querySelector('#a10-19').addEventListener('click', () => {
     clearStick()
     document.querySelector('.x10-19').classList.toggle('stick')
-})
+}) */
+
+
+//    this is a start for making each item display it's own contents for its click
+//--------- replace displayed item (stick item) ------------  replaceStickItem(date)
+
+// clearStick REMOVES THE PREVIOUSLY SHOWN ITEM
+function clearStick() {
+    const stickItems = document.querySelectorAll('.dropdown-content')
+    stickItems.forEach(el => {
+        el.classList.remove('stick')
+    })
+}
+
+const itemList = document.querySelectorAll('.dropdown')
+itemList.forEach((el, index) => el.addEventListener('click', () => {
+    var aDate = itemList[index].id
+    var xDate = '.' + aDate.replace(aDate[0], 'x')
+    console.log(xDate)
+    clearStick()
+    document.querySelector(xDate).classList.toggle('stick')
+
+}))
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   //convert aDate ID to xDate CLASS
 
 
 

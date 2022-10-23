@@ -19,9 +19,30 @@
 <body>
 
     <header>
-        <nav class="home hidden">
-            HOME
-        </nav>
+        <section class="infoLabelContain">
+            <!--           this section is for the info dropdown        -->
+            <label for="boxCheck" class="infoLabel">
+                <p><i id=" fa-play" class="fa-solid fa-play"></i><i id="fa-caret-down" class="fa-solid "></i>INFO</p>
+            </label>
+            <input type="checkbox" id="boxCheck" />
+            <div class="infoDropdown close" id="infoDropdown">
+                <div class="XtoCloseContainer" id="closeBox">
+                    <label for="boxCheck2">
+                        <i class="fa-regular fa-rectangle-xmark"></i>
+                    </label>
+                    <input type="checkbox" id="boxCheck2" />
+                </div>
+                <p><span><i class="fa-solid fa-star star-bigger"></i></span> means it's a working function with user
+                    interaction</p>
+                <p class="centerText">The others are simply to
+                    track my
+                    JavaScript learning</p>
+                <div class="containerForEasi">
+                    <p id="easiestHardest">8 kyu -- easiest --------->> 1 kyu -- hardest</p>
+                </div>
+            </div>
+        </section>
+
         <section>
             <h1>Breland's JavaScript Portfolio</h1>
         </section>
@@ -31,113 +52,102 @@
 
     </header>
     <main>
+        <section class="displaySolutionContainer"></section>
         <section class="kyuVerticalContainer">
-            <section>
-
-                <!--           this section is for the info dropdown        -->
-
-                <label for="boxCheck">
-                    <p><i id="fa-play" class="fa-solid fa-play"></i><i id="fa-caret-down" class="fa-solid "></i>INFO</p>
-                </label>
-                <input type="checkbox" id="boxCheck" />
-                <div class="dropDownItems close" id="dropDownItems">
-                    <div class="XtoCloseContainer" id="closeBox">
-                        <label for="boxCheck2">
-                            <i class="fa-regular fa-rectangle-xmark"></i>
-                        </label>
-                        <input type="checkbox" id="boxCheck2" />
-                    </div>
-                    <p><span>These <i class="fa-solid fa-star"></i></span>'s mean it's a working function, connected
-                        to
-                        the
-                        main.js file. </p>
-                    <p class="centerText">The others are pictures of my code and<br> the best voted solutions to
-                        track my
-                        JavaScript learning</p>
-                    <div class="containerForEasi">
-                        <p id="easiestHardest">8 kyu -- easiest --------->> 1 kyu -- hardest</p>
-                    </div>
-                </div>
-            </section>
+            <!--      <div class="kyuNavContain">
+                <ul class="kyuNav">
+                    <li><a href="#kyu8">8</a></li>
+                    <li><a href="#kyu7">7</a></li>
+                    <li><a href="#kyu6">6</a></li>
+                    <li><a href="#kyu5">5</a></li>
+                    <li><a href="#kyu4">4</a></li>
+                    <li><a href="#kyu3">3</a></li>
+                    <li><a href="#kyu2">2</a></li>
+                    <li><a href="#kyu1">1</a></li>
+                </ul>
+            </div> -->
 
             <!--                   start of kyu boxes 1 - 8         -->
 
 
-            <!------------------THIS IS A TEMPLATE -------------COPY AND PASTE IT---------------->
-            <!-- <section class="dropdown">
-                <span class="listItem">10-14</span>
-                <div class="dropdown-content">
-                    <h4 class="title">Title</h4>
-                    <p class="assignmentParagraph">Assignment goes here
+            <!------------------THIS IS A TEMPLATE    - no star-------------COPY AND PASTE IT---------------->
+            <!--                  ---------           10-17         -----------
 
-                    </p>
-                    <h5 class="solution">My Solution</h5>
-                    <img class="" src="images/10-2mine.png" alt="picture of code">
-                    <h5 class="best">Best Solution</h5>
-                    <img class="" src="images/10-2best.png" alt="picture of code">
-                </div>
-            </section>
+                 <section>
+                    <div class="dropdown" id="a___">
+                        <span class="listItem">___</span>
+                    </div>
+                    <div class="dropdown-content x___">
+                        <h4 class="title">________</h4>
+                        <p class="assignmentParagraph">
+                        </p>
+                        <h5 class="solution">My Solution</h5>
+                        <img src="images/mine.png">
+                        <h5 class="best">Best Solution</h5>
+                        <img src="images/best.png">
+                    </div>
+                </section>
             ---------------------------------------------------------------------------------------->
-            <!------------------THIS IS A TEMPLATE WITH A STAR *********** -------COPY AND PASTE IT---------------->
+            <!----------------☆☆     THIS IS A TEMPLATE --  WITH A STAR ☆☆ -------COPY AND PASTE IT---------------->
             <!--          
-                     <section class="dropdown ya">
-                <div><i class="fa-solid fa-star"></i></div>
-                <span class="listItem">10-13</span>
-                <div><i class="fa-solid fa-star spacer-hide"></i></div>
-               
-                <div class="dropdown-content">
-                    <h4 class="title">Title</h4>
-                    <p class="assignmentParagraph">Assignment</p>
-                    <h5 class="tryIt">Try It Out</h5>
-                    <label for="inputName">Enter your first and last name</label>
-                    <input id="nameInput" type="text" autocomplete="off">
-                    <button id="nameConvertSpartan">CONVERT</button>
-                    <h5 class='result' id="nameConvertResult"></h5>
-
-                    <h5 class="solution">My Solution</h5>
-                    <img class="" src="images/10-20mine.png" alt="picture of code">
-                    <h5 class="best">Best Solution</h5>
-                    <img class="" src="images/10-20best.png" alt="picture of code">
-                </div>
-            </section> -->
-            <!--IMG defalut size is 75
-            Options: bigger img100
-                     smaller img65 or img50-->
-            <!-- <script type="text/javascript" src="js/dailyJScode/10-.js"></script> -->
-            <!------------------------------------------------------------------------------------------>
-
-            <!-- ----------------------------------------------------------------------
-            ----------------------           7 kyu                ---------------------
-            ---------------------------------------------------------------------- -->
-
-            <section class="kyu">
-                <h3>7 kyu</h3>
-
-                <!---------           10-21         ----------->
-
+                 ----------    ☆   10-21    ☆     ------------
                 <section>
-                    <div class="dropdown" id="a10-21">
+                    <div class="dropdown" id="a___">
                         <div><i class="fa-solid fa-star"></i></div>
-                        <span class="listItem">10-21</span>
+                        <span class="listItem">___</span>
                         <div><i class="fa-solid fa-star spacer-hide"></i></div>
                     </div>
 
-                    <div class="dropdown-content x10-21">
+                    <div class="dropdown-content x___">
                         <h4 class="title"></h4>
-                        <p class="assignmentParagraph">
-                        </p>
+                        <p class="assignmentParagraph">___</p>
                         <h5 class="tryIt">Try It Out</h5>
-                        <label for="">Here</label>
+                        <label for="">___</label>
                         <input id="" type="text" autocomplete="off">
                         <button id="">CHECK</button>
                         <h5 class='result' id=""></h5>
 
                         <h5 class="solution">My Solution</h5>
-                        <img src="images/10-21mine.png" alt="picture of code">
+                        <img class="" src="images/mine.png" alt="picture of code">
                         <h5 class="best">Best Solution</h5>
-                        <img class="img100" src="images/10-21best.png" alt="picture of code">
+                        <img class="" src="images/best.png" alt="picture of code">
                     </div>
                 </section>
+
+            --IMG defalut size is 75
+            Options: bigger img100
+                     smaller img65 or img50-->
+            <!-- <script type="text/javascript" src="js/dailyJScode/10-.js"></script> -->
+            <!------------------------------------------------------------------------------------------>
+            <!-- ----------------------------------------------------------------------
+            ----------------------           6 kyu                ---------------------
+            ---------------------------------------------------------------------- -->
+            <section class="kyu" id="kyu6">
+                <h3>6 kyu</h3>
+                <!-- ---------           10-23         ----------- -->
+
+                <section>
+                    <div class="dropdown last" id="a10-23">
+                        <span class="listItem">10-23</span>
+                    </div>
+                    <div class="dropdown-content x10-23">
+                        <h4 class="title">Toggle List Items</h4>
+                        <p class="assignmentParagraph">This is the code I developed for toggling the list item that
+                            displays here when you click each item on the left navigation section.
+                        </p>
+                        <h5 class="solution">My Solution</h5>
+                        <img class="img100" src="images/10-23mine.png">
+                        <h5 class="best"></h5>
+
+                    </div>
+                </section>
+            </section>
+
+            <!-- ----------------------------------------------------------------------
+            ----------------------           7 kyu                ---------------------
+            ---------------------------------------------------------------------- -->
+            <section class="kyu" id="kyu7">
+                <h3>7 kyu</h3>
 
                 <!---------           10-20         ----------->
 
@@ -173,17 +183,18 @@
             ----------------------           8kyu                ---------------------
             ---------------------------------------------------------------------- -->
 
-            <section class="kyu">
+            <section class="kyu" id="kyu8">
                 <h3>8 kyu</h3>
 
 
                 <!---------           10-19         ----------->
 
-                <section id="a10-19" class="dropdown ">
-                    <div><i class="fa-solid fa-star"></i></div>
-                    <span class="listItem">10-19</span>
-                    <div><i class="fa-solid fa-star spacer-hide"></i></div>
-
+                <section>
+                    <div class="dropdown" id="a10-19">
+                        <div><i class="fa-solid fa-star"></i></div>
+                        <span class="listItem"> 10-19</span>
+                        <div><i class="fa-solid fa-star spacer-hide"></i></div>
+                    </div>
 
                     <div class="dropdown-content x10-19">
                         <h4 class="title">Enter Words and Sort</h4>
@@ -207,11 +218,12 @@
 
                 <!---------           10-18         ----------->
 
-                <section id="a10-18" class="dropdown">
-                    <div><i class="fa-solid fa-star"></i></div>
-                    <span class="listItem">10-18</span>
-                    <div><i class="fa-solid fa-star spacer-hide"></i></div>
-
+                <section>
+                    <div class="dropdown" id="a10-18">
+                        <div><i class="fa-solid fa-star"></i></div>
+                        <span class="listItem">10-18</span>
+                        <div><i class="fa-solid fa-star spacer-hide"></i></div>
+                    </div>
                     <div class="dropdown-content x10-18">
                         <h4 class="title">Enter Numbers and Sort</h4>
                         <p class="assignmentParagraph">*this is my variation of a 100Devs assignment*<br>
@@ -234,9 +246,11 @@
 
                 <!---------           10-17         ----------->
 
-                <section id="c10-17" class="dropdown">
-                    <span class="listItem">10-17</span>
-                    <div class="dropdown-content o10-17">
+                <section>
+                    <div class="dropdown" id="a10-17">
+                        <span class="listItem">10-17</span>
+                    </div>
+                    <div class="dropdown-content x10-17">
                         <h4 class="title">Cat and Dog Years</h4>
                         <p class="assignmentParagraph ">An owner got cat and dog at the same time as
                             kitten/puppy. That was
@@ -266,9 +280,11 @@
 
                 <!---------           10-16         ----------->
 
-                <section class="dropdown">
-                    <span class="listItem">10-16</span>
-                    <div class="dropdown-content">
+                <section>
+                    <div class="dropdown" id="a10-16">
+                        <span class="listItem">10-16</span>
+                    </div>
+                    <div class="dropdown-content x10-16">
                         <h4 class="title">Find 'needle' in the Haystack</h4>
                         <p class="assignmentParagraph">Write a function findNeedle() that takes an array full of junk
                             but
@@ -286,9 +302,11 @@
 
                 <!---------           10-15         ----------->
 
-                <section class="dropdown">
-                    <span class="listItem">10-15</span>
-                    <div class="dropdown-content">
+                <section>
+                    <div class="dropdown" id="a10-15">
+                        <span class="listItem">10-15</span>
+                    </div>
+                    <div class="dropdown-content x10-15">
                         <h4 class="title">Fixing Bot's Letter Input Errors</h4>
                         <p class="assignmentParagraph">
                             This digitised character
@@ -311,12 +329,14 @@
 
                 <!---------           10-14         ----------->
 
-                <section id="listItem" class="dropdown ya">
-                    <div><i class="fa-solid fa-star"></i></div>
-                    <span class="listItem">10-14</span>
-                    <div><i class="fa-solid fa-star spacer-hide"></i></div>
+                <section>
+                    <div class="dropdown" id="a10-14">
+                        <div><i class="fa-solid fa-star"></i></div>
+                        <span class="listItem"> 10-14</span>
+                        <div><i class="fa-solid fa-star spacer-hide"></i></div>
+                    </div>
 
-                    <div class="dropdown-content">
+                    <div class="dropdown-content x10-14">
                         <h4 class="title">Calculate Rental Cost</h4>
                         <p class="assignmentParagraph">Rental car costs $40 per day. If you rent the car for 3
                             or
@@ -337,12 +357,13 @@
                     </div>
                 </section>
 
-                <!---------           10-14         ----------->
+                <!---------           10-13         ----------->
 
-                <section class="dropdown">
-                    <span class="listItem">10-14</span>
-                    <div class="dropdown-content">
-
+                <section>
+                    <div class="dropdown" id="a10-13">
+                        <span class="listItem">10-13</span>
+                    </div>
+                    <div class="dropdown-content x10-13">
                         <h4 class="title">Is element in array?</h4>
                         <p class="assignmentParagraph">You will be given an array a and a value x. All you need
                             to
@@ -361,16 +382,16 @@
                     </div>
                 </section>
 
-                <!---------           10-13         ----------->
+                <!---------           10-12         ----------->
 
-                <section class="dropdown ya">
-                    <!--This is a list entry with a star-->
-                    <div><i class="fa-solid fa-star"></i></div>
-                    <span class="listItem">10-13</span>
-                    <div><i class="fa-solid fa-star spacer-hide"></i></div>
-                    <!-- </end> -->
+                <section>
+                    <div class="dropdown" id="a10-12">
+                        <div><i class="fa-solid fa-star"></i></div>
+                        <span class="listItem"> 10-12</span>
+                        <div><i class="fa-solid fa-star spacer-hide"></i></div>
+                    </div>
 
-                    <div class="dropdown-content">
+                    <div class="dropdown-content x10-12">
                         <h4 class="title">Convert Name to Initials</h4>
                         <p class="assignmentParagraph">Write a function to convert a name into initials. This kata
                             strictly
@@ -391,11 +412,13 @@
                     </div>
                 </section>
 
-                <!---------           10-13         ----------->
+                <!---------           10-11         ----------->
 
-                <section class="dropdown">
-                    <span class="listItem">10-13</span>
-                    <div class="dropdown-content">
+                <section>
+                    <div class="dropdown" id="a10-11">
+                        <span class="listItem">10-11</span>
+                    </div>
+                    <div class="dropdown-content x10-11">
                         <h4 class="title">Double Each</h4>
                         <p class="assignmentParagraph">Double each integer in an array
 
@@ -407,11 +430,13 @@
                     </div>
                 </section>
 
-                <!---------           10-12         ----------->
+                <!---------           10-10         ----------->
 
-                <section class="dropdown last">
-                    <span class="listItem">10-12</span>
-                    <div class="dropdown-content">
+                <section>
+                    <div class="dropdown last" id="a10-10">
+                        <span class="listItem">10-10</span>
+                    </div>
+                    <div class="dropdown-content x10-10">
                         <h4 class="title">Enough Fuel Left?</h4>
                         <p class="assignmentParagraph">Write a function that tells you if you have enough fuel
                             to
@@ -430,37 +455,32 @@
 
             </section>
 
-            <section class="kyu">
-                <div class="transparentGreyOverlay">
-                    <h3>6 kyu</h3>
-                    <p class="comingSoon">coming soon 🚀</p>
-                </div>
-            </section>
-            <section class="kyu">
+
+            <section class="kyu" id="kyu5">
                 <div class="transparentGreyOverlay">
                     <h3>5 kyu</h3>
                     <p class="comingSoon">coming soon 🚀</p>
                 </div>
             </section>
-            <section class="kyu">
+            <section class="kyu" id="kyu4">
                 <div class="transparentGreyOverlay">
                     <h3>4 kyu</h3>
                     <p class="comingSoon">coming soon 🚀</p>
                 </div>
             </section>
-            <section class="kyu">
+            <section class="kyu" id="kyu3">
                 <div class="transparentGreyOverlay">
                     <h3>3 kyu</h3>
                     <p class="comingSoon">coming soon 🚀</p>
                 </div>
             </section>
-            <section class="kyu">
+            <section class="kyu" id="kyu2">
                 <div class="transparentGreyOverlay">
                     <h3>2 kyu</h3>
                     <p class="comingSoon">coming soon 🚀</p>
                 </div>
             </section>
-            <section class="kyu">
+            <section class="kyu" id="kyu1">
                 <div class="transparentGreyOverlay">
                     <h3>1 kyu</h3>
                     <p class="comingSoon">coming soon 🚀</p>
@@ -468,37 +488,7 @@
             </section>
         </section> <!--   end of kyuVerticalContainer  -->
 
-        <section class="miniAppsContainer">
-            <section>
-
-                <label for="boxCheck">
-                    <p><i id="fa-play" class="fa-solid fa-play"></i><i id="fa-caret-down" class="fa-solid "></i>
-                        JavaScript codwars challenges</p>
-                </label>
-                <input type="checkbox" id="boxCheck" />
-
-
-                <div class="dropDownItems close" id="dropDownItems">
-
-
-                    <div class="XtoCloseContainer" id="closeBox">
-                        <label for="boxCheck2">
-                            <i class="fa-regular fa-rectangle-xmark"></i>
-                        </label>
-                        <input type="checkbox" id="boxCheck2" />
-                    </div>
-                    <p>Mini Apps</p>
-                    <p><span>These <i class="fa-solid fa-star"></i></span>'s mean</p>
-                    <p class="centerText"></p>
-                </div>
-            </section>
-
-
-            <!-- <div class="displayDailySolutionContainer">
-
-        </div> -->
-
-            <!-- STARRRRRRRRRR <i class="fa-solid fa-star"></i> -->
+        <!-- STARRRRRRRRRR <i class="fa-solid fa-star"></i> -->
     </main>
 
     <script src="https://kit.fontawesome.com/aff5f1d5dc.js" crossorigin="anonymous"></script>
