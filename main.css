@@ -61,6 +61,7 @@ table {
 body * {
     box-sizing: border-box;
     font-family: 'Kanit', sans-serif;
+    font-size: large;
 
 }
 
@@ -179,8 +180,11 @@ header #easiestHardest {
 }
 
 .assignmentSmallerText {
-    font-size: 8px;
+    font-size: 1.2em;
+    margin-top: 20px;
 }
+
+
 
 section.assignmentSmallerText {
     display: flex;
@@ -342,7 +346,7 @@ input#boxCheck:hover~#infoDropdown {
 
 
 /* -------------- LAYOUT  BEGIN------------------------------- */
-main, .kyu, .dropdown, .kyu>h3, .displayDailySolutionContainer, ul.kyuNav, .kyuNav li {
+main, .kyu, .dropdown, .kyu h3, .displayDailySolutionContainer, ul.kyuNav, .kyuNav li {
     display: flex;
 }
 
@@ -435,6 +439,7 @@ section.kyu {
     width: 20vw;
 }
 
+
 /* to remove margin from section top to match the display container*/
 section.kyuVerticalContainer section:first-child {
     margin-top: 0;
@@ -476,13 +481,13 @@ section.kyuVerticalContainer section:first-child {
 
 /* -------  css :hover displays preview of block  ------------------- */
 /* --- this will have to be done in JS because the dropdown-content isn't in the same div anymore */
-.dropdown:hover+.dropdown-content {
+/* .dropdown:hover+.dropdown-content {
     display: block;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 .dropdown:hover {
     background-color: rgba(252, 235, 88, 0.486);
@@ -493,7 +498,15 @@ section.kyuVerticalContainer section:first-child {
 
 .stick {
     display: block;
+    z-index: 1;
 }
+
+.stickHover {
+    display: block;
+    z-index: 4;
+}
+
+.kyuSectionActive
 
 /* -------------           then un-stick removes 'stick' class      ------ */
 .un-stick {
@@ -529,6 +542,16 @@ section.kyuVerticalContainer section:first-child {
         top: 15px;
     }
 
+    /* formating for 2 sections side by side */
+    .assignmentSmallerText {
+        font-size: .7em;
+
+    }
+
+    .assignmentSmallerText>.divFirst {
+        border-right: solid 1px black;
+    }
+
     .fa-rectangle-xmark {
         font-size: 1.5em;
         color: rgb(255, 82, 1);
@@ -542,7 +565,7 @@ section.kyuVerticalContainer section:first-child {
 
 @media screen and (max-width: 1000px) {
     * {
-        font-size: 1em;
+        font-size: 1.7rem;
     }
 
     header .easiestHardest {
@@ -551,13 +574,24 @@ section.kyuVerticalContainer section:first-child {
         font-size: 2rem;
     }
 
-    header p {
-        font-size: 14px;
+    h1, .infoLabel {
+        font-size: 1.4rem;
     }
 
-    section.kyu {}
+    .home {
+        font-size: 35px;
+    }
 
-    .kyu>h3 {}
+    .dropdown {
+        height: 50px;
+    }
+
+    .kyu h3 {
+        font-size: 1.4rem;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
 
 
 

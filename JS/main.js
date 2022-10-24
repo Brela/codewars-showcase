@@ -167,57 +167,44 @@ function abbrevName() {
 //--------------- ^^^^^^^^^^^  beginning of daily entries ^^^^^^^^^^^^^^ -----------
 
 //        page layout functions below
-//     this is fot the caret dropdown, doesn't work yet
-/* document.querySelector('#fa-play').onmouseenter = () => {
-    document.querySelector('#fa-caret-down').classList.add('fa-caret-down')
-}
-document.querySelector('#fa-play').addEventListener('click', () => {
-    document.querySelector('#fa-caret-down').classList.add('fa-caret-down')
-})
- */
+
 
 //===========================================================================================================
 
-//--------        this section is for making each list item DISPLAY content upon click   AKA:  STICK   -------------- 
+//------ this section is for making each list item DISPLAY ('stick') content upon click  -------------
+
+// ------  still need to fix a bug where the hover doesnt work on sections 
+// ---------   that are above the section of the selected list item
 
 //-------------------------------------------------------------------------------------------------------------
+//this itemList is all of the list items (dates) on left navigation bar of page
+const itemList = document.querySelectorAll('.dropdown')
 
+// mouseenter / mouseleave (hover) shows preview of item
+itemList.forEach((el, index) => el.addEventListener('mouseenter', () => {
+    var aID = itemList[index].id
+    var xClass = '.' + aID.replace(aID[0], 'x')
+    document.querySelector(xClass).classList.toggle('stickHover')
+}))
+itemList.forEach((el, index) => el.addEventListener('mouseleave', () => {
+    var aID = itemList[index].id
+    var xClass = '.' + aID.replace(aID[0], 'x')
+    document.querySelector(xClass).classList.toggle('stickHover')
+}))
 
-
-// EACH OF THESE DISPLAYS IT'S ITEM, I WOULD LIKE TO FIND A WAY TO MAKE ONE FUNCTION THAT CREATES AN ARRY
-//FOR THESE AND ALLOW EACH ARRAY ITEM TO DISPLAY ITS OWN ITEM
-//-----------------------------------------------------------------------------------------------------
-/* document.querySelector('#a10-21').addEventListener('click', () => {
-  
-    clearStick()
-    document.querySelector('.x10-21').classList.toggle('stick')
-}) */
-/* document.querySelector('#a10-20').addEventListener('click', () => {
-    clearStick()
-    document.querySelector('.x10-20').classList.toggle('stick')
-})
-document.querySelector('#a10-19').addEventListener('click', () => {
-    clearStick()
-    document.querySelector('.x10-19').classList.toggle('stick')
-}) */
-
-
-//    this is a start for making each item display it's own contents for its click
-//--------- replace displayed item (stick item) ------------  replaceStickItem(date)
-
-// clearStick REMOVES THE PREVIOUSLY SHOWN ITEM
+// clearStick REMOVES THE PREVIOUSLY SHOWN ITEM, it is used in each item's click event below
 function clearStick() {
     const stickItems = document.querySelectorAll('.dropdown-content')
     stickItems.forEach(el => {
         el.classList.remove('stick')
     })
 }
+//convert aDate (ID) to xDate (CLASS), call clearStick, 
+//then toggle its stick (display: block)
 
-const itemList = document.querySelectorAll('.dropdown')
 itemList.forEach((el, index) => el.addEventListener('click', () => {
     var aDate = itemList[index].id
     var xDate = '.' + aDate.replace(aDate[0], 'x')
-    console.log(xDate)
     clearStick()
     document.querySelector(xDate).classList.toggle('stick')
 
@@ -225,7 +212,6 @@ itemList.forEach((el, index) => el.addEventListener('click', () => {
 
 
 
-   //convert aDate ID to xDate CLASS
 
 
 
@@ -243,7 +229,14 @@ property of the event object. */
     }
 }); */
 
-
+//     this is fot the caret dropdown, doesn't work yet
+/* document.querySelector('#fa-play').onmouseenter = () => {
+    document.querySelector('#fa-caret-down').classList.add('fa-caret-down')
+}
+document.querySelector('#fa-play').addEventListener('click', () => {
+    document.querySelector('#fa-caret-down').classList.add('fa-caret-down')
+})
+ */
 
 
 
