@@ -181,7 +181,10 @@ function abbrevName() {
 const itemList = document.querySelectorAll('.dropdown')
 
 // mouseenter / mouseleave (hover) shows preview of item
-itemList.forEach((el, index) => el.addEventListener('mouseenter', () => {
+
+//         TESTING HERE
+
+/* itemList.forEach((el, index) => el.addEventListener('mouseenter', () => {
     var aID = itemList[index].id
     var xClass = '.' + aID.replace(aID[0], 'x')
     document.querySelector(xClass).classList.toggle('stickHover')
@@ -191,6 +194,9 @@ itemList.forEach((el, index) => el.addEventListener('mouseleave', () => {
     var xClass = '.' + aID.replace(aID[0], 'x')
     document.querySelector(xClass).classList.toggle('stickHover')
 }))
+ */
+
+
 
 // clearStick REMOVES THE PREVIOUSLY SHOWN ITEM, it is used in each item's click event below
 function clearStick() {
