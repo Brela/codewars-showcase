@@ -1,19 +1,28 @@
 # codeWars
 Here are my daily codeWars challenges / JS portfolio<br>
 The purpose of this is to track my journey of learning JavaScript
+## Live Site: <a href="https://brela-codewars.netlify.app/" target="_blank">brela-codewars.netlify.app</a>
+
+### Notes
+* main.js - JS to make list items with stars ⭐ work (usually with user input) 
+* script.js - JS/ jQuery code to make functions for the whole page and layout work
+* DailyJScode Folder - contains many .js files; each one is just a reference to that date's codewWars challenge (that's where I worked it out and screenshot it)
+
+## highlights
+* ✔️used first jQuery to make 'hover item shows preview' work only on device width > 1000px
+* ✔️used JS to create click events for each list item
 ## toDo
-* ✔️figure out layout
-* ✔️add JS click events for each list item
 * 📌fix hover on certain sections
 * 📌fix mobile
+* 📌learn how to use jQuery to make JS hover events work for only mobile
 
-## Live Site: https://brela-codewars.netlify.app/
+
 
 
 # timeline
 
 ## week 10-23-2022
-<strong>10-25</strong> 
+<strong>10-25</strong>  used <strong>jQuery for the first time!!!!</strong>
 <strong>10-24</strong> added some css mobile queries | fixed part of hover problem by moving from css :hover to JS mouseenter/ mouselave
 
 ## week 10-17-2022
