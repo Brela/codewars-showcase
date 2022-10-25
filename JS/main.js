@@ -165,61 +165,10 @@ function abbrevName() {
 }
 
 //--------------- ^^^^^^^^^^^  beginning of daily entries ^^^^^^^^^^^^^^ -----------
-
-//        page layout functions below
-
-
 //===========================================================================================================
 
-//------ this section is for making each list item DISPLAY ('stick') content upon click  -------------
 
-// ------  still need to fix a bug where the hover doesnt work on sections 
-// ---------   that are above the section of the selected list item
-
-//-------------------------------------------------------------------------------------------------------------
-//this itemList is all of the list items (dates) on left navigation bar of page
-const itemList = document.querySelectorAll('.dropdown')
-
-// mouseenter / mouseleave (hover) shows preview of item
-
-//         TESTING HERE
-
-/* itemList.forEach((el, index) => el.addEventListener('mouseenter', () => {
-    var aID = itemList[index].id
-    var xClass = '.' + aID.replace(aID[0], 'x')
-    document.querySelector(xClass).classList.toggle('stickHover')
-}))
-itemList.forEach((el, index) => el.addEventListener('mouseleave', () => {
-    var aID = itemList[index].id
-    var xClass = '.' + aID.replace(aID[0], 'x')
-    document.querySelector(xClass).classList.toggle('stickHover')
-}))
- */
-
-
-
-// clearStick REMOVES THE PREVIOUSLY SHOWN ITEM, it is used in each item's click event below
-function clearStick() {
-    const stickItems = document.querySelectorAll('.dropdown-content')
-    stickItems.forEach(el => {
-        el.classList.remove('stick')
-    })
-}
-//convert aDate (ID) to xDate (CLASS), call clearStick, 
-//then toggle its stick (display: block)
-
-itemList.forEach((el, index) => el.addEventListener('click', () => {
-    var aDate = itemList[index].id
-    var xDate = '.' + aDate.replace(aDate[0], 'x')
-    clearStick()
-    document.querySelector(xDate).classList.toggle('stick')
-
-}))
-
-
-
-
-
+// notes
 
 //do function on 'enter' key hit
 
@@ -245,34 +194,3 @@ document.querySelector('#fa-play').addEventListener('click', () => {
  */
 
 
-
-
-
-//event listeners for dropdown
-
-/* 
-const buttons = document.querySelectorAll('.listItem')
-
-Array.from(buttons).forEach(element => element.addEventListener('click', displayBlock))
-
-function displayBlock() {
-    document.querySelector('.dropdown-content').classList.toggle('dropdown-content-unstick')
-
-} */
-
-/* var buttons = document.querySelectorAll('.listItem');
-
-for (var i = 0; i < buttons.length; i++) {
-    var self = buttons[i];
-
-    self.addEventListener('click', function (event) {
-        // prevent browser's default action
-        event.preventDefault();
-
-        // call your awesome function here
-        displayBlock(this); // 'this' refers to the current button on for loop
-    }, false);
-}
-function displayBlock() {
-    document.querySelector('.dropdown-content').classList.toggle('dropdown-content-unstick')
-} */

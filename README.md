@@ -9,12 +9,12 @@ The purpose of this is to track my journey of learning JavaScript
 * DailyJScode Folder - contains many .js files; each one is just a reference to that date's codewWars challenge (that's where I worked it out and screenshot it)
 
 ## highlights
-* ✔️used first jQuery to make 'hover item shows preview' work only on device width > 1000px
-* ✔️used JS to create click events for each list item
+✔️used first jQuery to make 'hover item shows preview' work only on device width > 1000px
+✔️used JS to create click events for each list item
 ## toDo
-* 📌fix hover on certain sections
-* 📌fix mobile
-* 📌learn how to use jQuery to make JS hover events work for only mobile
+📌fix hover on certain sections
+📌fix mobile
+📌learn how to use jQuery to make JS hover events work for only mobile
 
 
 

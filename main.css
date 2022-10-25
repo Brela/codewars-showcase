@@ -353,7 +353,7 @@ main, .kyu, .dropdown, .kyu h3, .displayDailySolutionContainer, ul.kyuNav, .kyuN
 
 /* 
 this whole section can be deployed once there are lots of list items; 
-it is a navigation bar, the style and layout is all; here, but it might 
+it is a NAV BAR FOR KYU SECTIONS, the style and layout is all; here, but it might 
 need some work with where it navigates to (into center of kyu sections)
 
 ul.kyuNav {
@@ -506,7 +506,8 @@ section.kyuVerticalContainer section:first-child {
     z-index: 4;
 }
 
-.kyuSectionActive
+/* stickHover is removed for mobile query <1000px because it made the poppups (sticks) not work on mobile */
+
 
 /* -------------           then un-stick removes 'stick' class      ------ */
 .un-stick {
@@ -568,6 +569,11 @@ section.kyuVerticalContainer section:first-child {
         font-size: 1.7rem;
     }
 
+    .stickHover {
+        display: none;
+        z-index: 4;
+    }
+
     header .easiestHardest {
         width: 90%;
         margin: auto 5%;
@@ -592,7 +598,6 @@ section.kyuVerticalContainer section:first-child {
         display: flex;
         align-items: center;
     }
-
 
 
 }
