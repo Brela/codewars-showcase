@@ -2,6 +2,22 @@
 document.querySelector('button').addEventListener('click', function handleClick(event) {
     event.preventDefault();
 });
+//from now on USE BEST SOLUTION FOR CODE TO CONSOLIDATE AND SAVE ON SPACE
+//---------------------------------------------------------------------------------------------------------
+// ------------------            10-20 Xs vs Os        ----------------------------------------------------
+let yearToCenturyInput = document.querySelector('#yearToCenturyInput')
+yearToCenturyInput.addEventListener('keypress', (event) => {
+    let keyCode = event.keyCode ? event.keyCode : event.which;
+    if (keyCode === 13) {
+        return convertYear_Century();
+    }
+});
+
+function convertYear_Century() {
+    let yearToCenturySol = Math.ceil(Number(yearToCenturyInput.value) / 100)
+    console.log(yearToCenturySol)
+    document.querySelector('#yearToCenturyResult').innerText = yearToCenturySol
+}
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -12,13 +28,13 @@ let inputXsOs = document.querySelector('#enterXsOsString')
 inputXsOs.addEventListener('keypress', (event) => {
     let keyCode = event.keyCode ? event.keyCode : event.which;
     if (keyCode === 13) {
-        return checkXsOs();
+        return checkXsVsOs();
     }
 });
 
 //CHECK STRING FOR XS VS OS
-document.querySelector('#checkXoSringButton').addEventListener('click', checkXsOs)
-function checkXsOs() {
+document.querySelector('#checkXoSringButton').addEventListener('click', checkXsVsOs)
+function checkXsVsOs() {
     let stringXsOs = inputXsOs.value.toLowerCase().split('');
     let resultXsOs = stringXsOs.filter(x => x === 'x').length === stringXsOs.filter(x => x === 'o').length ? 'true' : 'false';
     document.querySelector('#resultXsOsHere').innerText = resultXsOs;
