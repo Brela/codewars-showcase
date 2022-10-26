@@ -318,8 +318,8 @@ input#boxCheck {
     align-items: center;
     top: 6vh;
     left: 1vw;
-    height: 200px;
-    width: 50vw;
+    height: 220px;
+    width: 70vw;
     background-color: rgb(218, 233, 215);
     color: rgb(7, 7, 6);
 }
@@ -458,6 +458,15 @@ section.kyuVerticalContainer section:first-child {
     border-bottom: 1px solid rgb(160, 170, 160);
 }
 
+.displaySolutionContainer {
+    position: fixed;
+    top: 12vh;
+    right: 5vw;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.356);
+    width: 67vw;
+    height: 80vh;
+}
 
 .dropdown-content {
     display: none;
@@ -532,10 +541,7 @@ section.kyuVerticalContainer section:first-child {
     height: 200px;
 } */
 @media screen and (max-width: 1200px) {
-    input#boxCheck:checked~#infoDropdown {
-        display: flex;
-        height: 300px;
-    }
+
 
     .XtoCloseContainer {
         display: block;
@@ -562,6 +568,7 @@ section.kyuVerticalContainer section:first-child {
         display: none;
     }
 
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -569,16 +576,30 @@ section.kyuVerticalContainer section:first-child {
         font-size: 1.7rem;
     }
 
+    main {
+        margin: auto 0vw;
+    }
+
+    header {
+        height: 110px;
+    }
+
+    .dropdown {
+
+        width: 15vw;
+
+    }
+
     .stickHover {
         display: none;
         z-index: 4;
     }
 
-    header .easiestHardest {
+    /*   header .easiestHardest {
         width: 90%;
         margin: auto 5%;
         font-size: 2rem;
-    }
+    } */
 
     h1, .infoLabel {
         font-size: 1.4rem;
@@ -599,5 +620,37 @@ section.kyuVerticalContainer section:first-child {
         align-items: center;
     }
 
+    section.kyuVerticalContainer {
+        margin: 6vh 0;
+        flex-basis: 10vw;
+    }
 
+    section.kyu {
+        margin: 0px auto;
+    }
+
+    .displaySolutionContainer {
+        position: fixed;
+        top: 6vh;
+        right: 0vw;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.356);
+        width: 80vw;
+        height: 100%;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: fixed;
+        right: 5vw;
+        /* if changing this top also change kyuVerticalContainer  and  displaySolutionContainer  TOP + RIGHT + width*/
+        top: 6vh;
+        background-color: #f9f9f9;
+        width: 70vw;
+        height: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 4;
+        overflow-y: scroll;
+    }
 }
