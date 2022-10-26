@@ -590,10 +590,6 @@ section.kyuVerticalContainer section:first-child {
 
     }
 
-    .stickHover {
-        display: none;
-        z-index: 4;
-    }
 
     /*   header .easiestHardest {
         width: 90%;
