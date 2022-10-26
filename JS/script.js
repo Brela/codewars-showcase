@@ -9,23 +9,7 @@ $(document).ready(function () {
 
     const itemList = document.querySelectorAll('.dropdown')
     // clearStick REMOVES THE PREVIOUSLY SHOWN ITEM, it is used in each item's click event below
-    function clearStick() {
-        const stickItems = document.querySelectorAll('.dropdown-content')
-        stickItems.forEach(el => {
-            el.classList.remove('stick')
-        })
-    }
-    //                             -----------------------------------------------
-    //convert aDate (ID) to xDate (CLASS), call clearStick, 
-    //then toggle its stick (display: block)
 
-    itemList.forEach((el, index) => el.addEventListener('click', () => {
-        var aDate = itemList[index].id
-        var xDate = '.' + aDate.replace(aDate[0], 'x')
-        clearStick()
-        document.querySelector(xDate).classList.toggle('stick')
-
-    }))
     //-------------------------------------------------------------------------------------------------------------
     //shows preview of list item's block on devices above 1000px
     if ($(window).width() > 1000) {

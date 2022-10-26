@@ -446,7 +446,7 @@ section.kyuVerticalContainer section:first-child {
 }
 
 /* --------     main block that displays for each daily codewars item                                ---------
------------    JS make it 'stick' when clicked, but it also displays on mouse hover for a preview    -------- */
+-----------    JS makes it 'stick' when clicked, but it also displays on mouse hover for a preview    -------- */
 .dropdown {
     display: flex;
     flex-direction: row;
@@ -519,10 +519,10 @@ section.kyuVerticalContainer section:first-child {
 
 
 /* -------------           then un-stick removes 'stick' class      ------ */
-/* .un-stick {
+.un-stick {
     display: none;
 }
- */
+
 
 
 
@@ -636,12 +636,13 @@ section.kyuVerticalContainer section:first-child {
     }
 
     .dropdown-content {
+        display: none;
         position: fixed;
-        right: 0vw;
+        right: 5vw;
         /* if changing this top also change kyuVerticalContainer  and  displaySolutionContainer  TOP + RIGHT + width*/
         top: 6vh;
         background-color: #f9f9f9;
-        width: 80vw;
+        width: 70vw;
         height: auto;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         padding: 12px 16px;

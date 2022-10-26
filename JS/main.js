@@ -168,6 +168,30 @@ function abbrevName() {
 //===========================================================================================================
 
 
+
+
+const itemList = document.querySelectorAll('.dropdown')
+
+
+function clearStick() {
+    const stickItems = document.querySelectorAll('.dropdown-content')
+    stickItems.forEach(el => {
+        el.classList.remove('stick')
+    })
+}
+//                             -----------------------------------------------
+//convert aDate (ID) to xDate (CLASS), call clearStick, 
+//then toggle its stick (display: block)
+
+itemList.forEach((el, index) => el.addEventListener('click', () => {
+    var aDate = itemList[index].id
+    var xDate = '.' + aDate.replace(aDate[0], 'x')
+    clearStick()
+    console.log('ok')
+    document.querySelector(xDate).classList.toggle('stick')
+
+}))
+
 // notes
 
 //do function on 'enter' key hit
