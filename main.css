@@ -68,12 +68,18 @@ License: none (public domain)
 
    }
 
+   a, a:active {
+       text-decoration: none;
+       color: inherit;
+   }
+
    body {
-       background: rgb(200, 206, 204);
+       background: rgb(163, 157, 156)
    }
 
    h1 {
-       font-size: 1.3em;
+       font-size: 1.2em;
+       color: rgb(34, 70, 37);
    }
 
    h2 {
@@ -96,22 +102,31 @@ License: none (public domain)
        display: flex;
        justify-content: space-around;
        align-items: center;
-       height: 8vh;
+       height: 6vh;
        position: fixed;
        width: 100vw;
        text-align: center;
        z-index: 4;
        line-height: 1.5em;
-       background: rgb(240, 253, 244);
+       background: linear-gradient(360deg, rgb(202, 199, 199), rgba(243, 243, 243, 0.844));
    }
 
    /* home button */
    nav.home {
-       color: white;
+       color: rgb(2, 2, 2);
+       font-size: 10px;
        box-shadow: 2px 2px 10px rgb(255, 255, 255);
-       font-size: .8em;
-       background: rgba(128, 128, 128, 0.507);
-       padding: 5px 15px;
+       padding: 0 15px;
+       height: 35px;
+       width: 130px
+   }
+
+
+
+
+   nav.home:hover {
+       background-color: rgb(159, 172, 158);
+       box-shadow: 2px 2px 10px rgb(255, 255, 255);
    }
 
    /* =============  OPTIONAL STYLES ==================*/
@@ -174,6 +189,7 @@ License: none (public domain)
        width: 70vw;
        background-color: rgb(218, 233, 215);
        color: rgb(7, 7, 6);
+
    }
 
    input#boxCheck:hover~#infoDropdown {
@@ -199,7 +215,7 @@ License: none (public domain)
        width: 100%;
        padding: 5px 13px;
        border: 2px solid rgb(192, 184, 184);
-       font-size: 1.5em;
+       font-size: 1.3em;
        background-position: center;
        -webkit-background-clip: text;
        -moz-background-clip: text;
@@ -218,14 +234,15 @@ License: none (public domain)
 
    .infoLabelContain {
        height: 35px;
+       box-shadow: 2px 2px 10px rgb(255, 255, 255);
    }
 
    .infoLabel p {
-       width: 150px
+       width: 130px
    }
 
    .infoLabel p:hover {
-       background: rgb(167, 194, 167);
+       background: rgb(159, 172, 158);
    }
 
    /*  ------- END of  INFO dropdown ------------- */
@@ -253,16 +270,17 @@ License: none (public domain)
        align-items: center;
        justify-content: center;
        background: rgb(241, 238, 233);
-       font-size: 1.5rem;
+       font-size: 1.7rem;
+       font-weight: 700;
        word-spacing: 10px;
-       letter-spacing: 1.5px;
+       letter-spacing: 1px;
        height: 2em;
        margin-bottom: 10px;
-       color: rgb(39, 32, 129);
+       color: rgb(69, 84, 85);
        /* text-shadow: 4px 4px #ffffff; */
-       -webkit-text-fill-color: rgba(44, 109, 134, 0.904);
+       -webkit-text-fill-color: rgb(55, 66, 56);
        /* -webkit-text-stroke-color: rgba(41, 49, 38, 0.76); */
-       -webkit-text-stroke-width: .5px;
+       /* -webkit-text-stroke-width: .5px; */
    }
 
    .solution {
@@ -314,11 +332,11 @@ License: none (public domain)
        min-width: 100px;
        width: auto;
        height: 2em;
-       background: rgb(142, 175, 142);
+       background: rgb(170, 180, 163);
    }
 
    button:hover {
-       background: rgb(121, 223, 111);
+       background: rgb(132, 189, 127);
    }
 
    .resetButton {
@@ -409,18 +427,8 @@ ul.kyuNav {
 
    /* positioned to left side of screen */
    .kyuVerticalContainer {
-       margin: 12vh 0;
+       margin: 9vh 0;
        flex-basis: 20vw;
-   }
-
-   .displaySolutionContainer {
-       position: fixed;
-       top: 12vh;
-       right: 5vw;
-       z-index: 1;
-       background: rgba(255, 255, 255, 0.356);
-       width: 67vw;
-       height: 80vh;
    }
 
    section.kyu {
@@ -469,12 +477,12 @@ dropdown - list items in left navgation bar |  dropdown-content - the content th
 
    .displaySolutionContainer {
        position: fixed;
-       top: 12vh;
+       top: 10.5vh;
        right: 5vw;
        z-index: 1;
        background: rgba(255, 255, 255, 0.356);
        width: 67vw;
-       height: 80vh;
+       height: 100vh;
    }
 
    .dropdown-content {
@@ -482,7 +490,7 @@ dropdown - list items in left navgation bar |  dropdown-content - the content th
        position: fixed;
        right: 5vw;
        /* if changing this top also change kyuVerticalContainer  and  displaySolutionContainer  TOP + RIGHT + width*/
-       top: 12vh;
+       top: 10.5vh;
        background-color: #f9f9f9;
        width: 67vw;
        height: 100%;
