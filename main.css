@@ -584,6 +584,10 @@ dropdown - list items in left navgation bar |  dropdown-content - the content th
            font-size: 2.2rem;
        }
 
+       img {
+           width: 100%;
+       }
+
        main {
            margin: auto 0vw;
        }

@@ -203,7 +203,6 @@ itemList.forEach((el, index) => el.addEventListener('click', () => {
     var aDate = itemList[index].id
     var xDate = '.' + aDate.replace(aDate[0], 'x')
     clearStick()
-    console.log('ok')
     document.querySelector(xDate).classList.toggle('stick')
 
 }))
