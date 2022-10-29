@@ -1,0 +1,1 @@
+.list-item-selected and .stick classes must be moved to whichever item you want to be displayed on page load

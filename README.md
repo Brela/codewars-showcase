@@ -12,9 +12,10 @@ The purpose of this is to track my journey of learning JavaScript
 ✔️used first jQuery to make 'hover item shows preview' work only on device width > 1000px
 ✔️used JS to create click events for each list item
 ## toDo
-📌fix hover on certain sections
+✔️learn how to use jQuery to make JS hover events work for only mobile
+📌preview still causing buggy problems
 📌fix mobile
-📌learn how to use jQuery to make JS hover events work for only mobile
+📌rename any class names that aren't clearly descriptive
 
 
 
@@ -22,6 +23,7 @@ The purpose of this is to track my journey of learning JavaScript
 # timeline
 
 ## week 10-23-2022
+Fixed all known bugs and improved layout
 <strong>10-25</strong>  used <strong>jQuery for the first time!!!!</strong>
 <strong>10-24</strong> added some css mobile queries | fixed part of hover problem by moving from css :hover to JS mouseenter/ mouselave
 
