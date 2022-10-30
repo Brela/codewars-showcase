@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    //prevent default page reload on click
+    document.querySelector('button').addEventListener('click', function handleClick(event) {
+        event.preventDefault();
+    });
 
     // ------  still need to fix a bug where the hover doesnt work on sections 
     // ---------   that are above the section of the selected list item
