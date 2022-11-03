@@ -63,6 +63,8 @@ License: none (public domain)
    /* =============  BASE STYLES  ==================*/
    body * {
        box-sizing: border-box;
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
        font-family: 'Kanit', sans-serif;
        font-size: large;
 
