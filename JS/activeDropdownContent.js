@@ -10,6 +10,34 @@ $(document).ready(function () {
             })
         })
     }
+
+    //---------------------------------------------------------------------------------------------------------
+    // ------------------            11-6   square X by N      ----------------------------------------------------
+    let squareXbyNinput1 = document.querySelector('#squareXbyNinput1')
+    let squareXbyNinput2 = document.querySelector('#squareXbyNinput2')
+    squareXbyNinput2.addEventListener('keypress', (event) => {
+        let keyCode = event.keyCode ? event.keyCode : event.which;
+        if (keyCode === 13) {
+            return squareXbyN(squareXbyNinput1.value, squareXbyNinput2.value);
+        }
+    });
+    function squareXbyN(x, n) {
+        console.log(x, n)
+        let arr = [x]
+        if (n > 0) {
+            for (let i = 1; i < n; i++) {
+                x = x * x
+                arr.push(` ${x} `)
+            }
+            console.log(arr)
+            document.querySelector('#squareXbyNresult').innerText = String(arr).split(',  ')
+        } else {
+            document.querySelector('#squareXbyNresult').innerText = 'square must be greater than 0'
+        }
+    }
+    // squareXbyN(3, 4)
+
+
     //from now on USE BEST SOLUTION FOR CODE TO CONSOLIDATE AND SAVE ON SPACE
     //---------------------------------------------------------------------------------------------------------
     // ------------------            10-30 Count each Char type        ----------------------------------------------------
