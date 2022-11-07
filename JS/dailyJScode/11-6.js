@@ -7,6 +7,8 @@ Examples
 3, 3  -->  [3, 9, 81] */
 
 // MINE
+
+
 function squares(x, n) {
     let arr = [x]
     if (n > 0) {

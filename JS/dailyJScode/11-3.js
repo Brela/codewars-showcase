@@ -1,6 +1,7 @@
 //calculate average
 
 // MINE is best
+
 function getAverage(marks) {
     return marks.reduce((prev, current) => current += prev) / marks.length
 }

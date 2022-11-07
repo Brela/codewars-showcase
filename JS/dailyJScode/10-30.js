@@ -6,6 +6,7 @@ Solve("*'&ABCDabcde12345") = [4,5,5,3].
  */
 
 // MINE
+
 function solve(s) {
     const specialList = `[\`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/`
     const lowerList = `abcdefghijklmnopqrstuvwxyz`
@@ -27,6 +28,7 @@ function solve(s) {
 }
 
 // BEST
+
 const solve2 = (string) => (
     Object.values([...string].reduce((acc, char) => {
         if (/[A-Z]/.test(char)) {
