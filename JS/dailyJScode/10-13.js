@@ -7,6 +7,7 @@ For example:
 function maps(x) {
     return x.map((x) => x *= 2)
 }
+// ---------------------------------------------
 
 
 function maps(x) {

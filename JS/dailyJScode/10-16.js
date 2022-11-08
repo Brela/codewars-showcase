@@ -18,7 +18,7 @@ function findNeedle(array) {
         if (array[i] === 'needle')
             return `found the needle at position ${i}`
     }
-}
+} // ------------------------------------------------------------------
 
 
 

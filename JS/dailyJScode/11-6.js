@@ -20,7 +20,7 @@ function squares(x, n) {
     } else {
         return x = []
     }
-}
+} // ---------------------------------------------
 
 
 console.log(squares(2, 5))

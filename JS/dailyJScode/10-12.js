@@ -12,18 +12,17 @@ patrick feeney => P.F */
 //mine
 
 function abbrevName(name) {
-    let nameArray = name.toUpperCase().split("")
-    let firstNameLetter = nameArray[0]
-    let lastNameLetter = nameArray[nameArray.indexOf(" ") + 1]
-    return `${firstNameLetter}.${lastNameLetter}`
+  let nameArray = name.toUpperCase().split("")
+  let firstNameLetter = nameArray[0]
+  let lastNameLetter = nameArray[nameArray.indexOf(" ") + 1]
+  return `${firstNameLetter}.${lastNameLetter}`
 }
 
 //best practice
 
 function abbrevName(name) {
-
-    var nameArray = name.split(" ");
-    return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+  var nameArray = name.split(" ");
+  return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
 }
 
 /* const chai = require("chai");

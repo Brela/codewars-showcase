@@ -15,6 +15,7 @@ function rentalCarCost(d) {
         return d * 40 - 50
     }
 }
+// ----------------------------------------------------------
 
 //best for shortness
 function rentalCarCost(d) {

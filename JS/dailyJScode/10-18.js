@@ -23,8 +23,10 @@ Create a function copySorted(arr) that returns such a copy. */
 
 let arrWords = ["HTML", "JavaScript", "CSS", "Breland", "ransatklne"];
 
-function sortWords() {
+function sortWords(arrWords) {
     return arrWords.slice().sort();
 }
 let sorted1 = sortWords()
-console.log(sorted1)
+
+
+const sortNums = arr => arr.sort((a, b) => a - b)

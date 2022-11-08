@@ -11,6 +11,8 @@ XO("zzoo") => false
  */
 
 //MINE
+
+
 function XO(str) {
     let splitStr = str.toLowerCase().split("")
     let Xs = []
@@ -24,9 +26,13 @@ function XO(str) {
     })
     return Xs.length === Os.length ? true : false;
 }
+
+//---------------------------------------------------------------------------------
 console.log(XO('iuhdxXXoOOihsdOoXx'))
 
 //BEST
+
+
 function XO(str) {
     let x = str.match(/x/gi);
     let o = str.match(/o/gi);
