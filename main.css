@@ -437,7 +437,7 @@ ul.kyuNav {
 
    /* positioned to left side of screen */
    .kyuVerticalContainer {
-       margin: 10.5vh 0;
+       margin: 8.88vh 0;
        flex-basis: 20vw;
    }
 
@@ -530,7 +530,7 @@ dropdown - list items in left navgation bar |  dropdown-content - the content th
        background-color: rgba(202, 197, 151, 0.486);
    } */
    section.kyu:hover {
-       z-index: 6;
+       z-index: 2;
    }
 
    .dropdown:hover {
@@ -618,7 +618,7 @@ dropdown - list items in left navgation bar |  dropdown-content - the content th
 
    @media screen and (max-width: 1000px) {
        * {
-           font-size: 2.2rem;
+           font-size: 20rem;
        }
 
        img {
@@ -632,21 +632,40 @@ dropdown - list items in left navgation bar |  dropdown-content - the content th
        }
 
        header {
-           height: 110px;
+           height: 6vh;
+       }
+
+       .title {
+
+           border-bottom: 1px solid rgb(121, 128, 130);
+           margin-top: 10px;
+
+           font-size: 2rem;
+           font-weight: 700;
+           word-spacing: 10px;
+           letter-spacing: 1px;
+           min-height: 2em;
+           height: auto;
+           margin-bottom: 20px;
+           padding-bottom: 10px;
+
        }
 
        .dropdown {
-
            width: 15vw;
-
        }
 
+       .dropdown-content p, .dropdown-content label {
+           font-size: 1.4em;
+       }
 
-       /*   header .easiestHardest {
-        width: 90%;
-        margin: auto 5%;
-        font-size: 2rem;
-    } */
+       input {
+           margin-top: 15px;
+       }
+
+       .solution, .tryIt {
+           font-size: 2em;
+       }
 
        h1, .infoLabel {
            font-size: 1.4rem;
@@ -693,7 +712,7 @@ dropdown - list items in left navgation bar |  dropdown-content - the content th
            top: 6vh;
            background-color: #f9f9f9;
            width: 80vw;
-           height: auto;
+           height: 100%;
            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
            padding: 12px 16px;
            z-index: 4;
