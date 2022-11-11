@@ -10,6 +10,21 @@ $(document).ready(function () {
             })
         })
     }
+    //---------------------------------------------------------------------------------------------------------
+    // ------------------            11-10          ----------------------------------------------------
+    let stringWithDashesInput = document.querySelector('#stringWithDashesInput')
+    stringWithDashesInput.addEventListener('keypress', (event) => {
+        let keyCode = event.keyCode ? event.keyCode : event.which;
+        if (keyCode === 13) {
+            return accum(stringWithDashesInput.value);
+        }
+    });
+    function accum(s) {
+        let stringWithDashesAnswer = s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+        document.querySelector('#stringWithDashesResult').innerText = stringWithDashesAnswer
+    }
+
+
 
     //---------------------------------------------------------------------------------------------------------
     // ------------------            11-6   square X by N      ----------------------------------------------------
