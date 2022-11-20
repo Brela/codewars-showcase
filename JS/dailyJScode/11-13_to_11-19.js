@@ -125,9 +125,19 @@ function givme(triplet) {
     // then get the index of the original number in the original array
     return tripletOg.indexOf(tripletCopy)
 }
-console.log(givme([5, 10, 2])) // returns 5
+// console.log(givme([5, 10, 2])) // returns 5
 
 // BEST VOTED SOLUTION
 function gimme(a) {
     return a.indexOf(a.concat().sort(function (a, b) { return a - b })[1])
 }
+
+
+//==========================  11-19  ==============================
+
+function sortSequence(sequence) {
+    let arrs = sequence.join('').split('0').map(el => el.split(''))
+    return a
+}
+console.log(sortSequence([3, 2, 1, 0, 5, 6, 4, 0, 1, 5, 3, 0, 4, 2, 8, 0]))
+
