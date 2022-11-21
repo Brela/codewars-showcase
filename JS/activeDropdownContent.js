@@ -10,6 +10,17 @@ $(document).ready(function () {
             })
         })
     }
+
+    //---------------------------------------------------------------------------------------------------------
+    // ------------------            11-          ----------------------------------------------------
+    /*    let Input = document.querySelector('#Input')
+       Input.addEventListener('keypress', (event) => {
+           let keyCode = event.keyCode ? event.keyCode : event.which;
+           if (keyCode === 13) {
+               return accum(Input.value);
+           }
+       }); */
+
     //---------------------------------------------------------------------------------------------------------
     // ------------------            11-10          ----------------------------------------------------
     let stringWithDashesInput = document.querySelector('#stringWithDashesInput')

@@ -38,3 +38,18 @@ var isAnagram = function (test, original) {
     var o = original.toLowerCase().split('').sort().join('');
     return (t == o) ? true : false;
 };
+
+// ================================ 11-20   ===============================
+
+/* Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+Return your answer as a number. */
+
+// mine = best solution
+function sumMix(x) {
+    return x.map(el => Number(el)).reduce((prev, curr) => prev + curr, 0)
+}
+
+console.log(sumMix([9, 3, '7', '3']))
+
+// ================================ 11-20   ===============================
