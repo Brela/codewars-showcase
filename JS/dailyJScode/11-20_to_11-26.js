@@ -50,6 +50,30 @@ function sumMix(x) {
     return x.map(el => Number(el)).reduce((prev, curr) => prev + curr, 0)
 }
 
-console.log(sumMix([9, 3, '7', '3']))
+// console.log(sumMix([9, 3, '7', '3']))
 
-// ================================ 11-20   ===============================
+// ================================ 11-24   ===============================
+
+/* Count the number of divisors of a positive integer n.
+
+Random tests go up to n = 500000.
+
+Examples (input --> output)
+4 --> 3 (1, 2, 4)
+5 --> 2 (1, 5)
+12 --> 6 (1, 2, 3, 4, 6, 12)
+30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30)
+Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
+
+ */
+
+function getDivisorsCnt(n) {
+    let x = 0
+    for (let i = 0; i <= n; i++) {
+        if (n % i === 0) {
+            x += 1
+        }
+    }
+    return x
+}
+console.log(getDivisorsCnt(100))
