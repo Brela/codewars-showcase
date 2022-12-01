@@ -16,7 +16,7 @@ function descendingOrder(n) {
     return Number(String(n).split('').sort((a, b) => b - a).join(''))
 }
 
-console.log(descendingOrder(4839))
+// console.log(descendingOrder(4839))
 
 // -----------------   11-30-22  ------------------
 /* Your job is to figure out the index of which vowel is missing from a given string:
@@ -39,9 +39,57 @@ function absentVowel(x) {
     return arr.indexOf(missing);
 }
 
-console.log(absentVowel("John Doe hs seven red pples under his bsket"))
+// console.log(absentVowel("John Doe hs seven red pples under his bsket"))
 
 // OTHER SOLUTION
 function absentVowel(x) {
     return ["a", "e", "i", "o", "u"].findIndex(v => !x.includes(v));
 }
+
+// ------------------------ 12-1  -------------------------------------
+
+/* Given the following input array:
+
+var list1 = [
+    { firstName: 'Aba', lastName: 'N.', country: 'Ghana', continent: 'Africa', age: 21, language: 'Python' },
+    { firstName: 'Abb', lastName: 'O.', country: 'Israel', continent: 'Asia', age: 39, language: 'Java' }
+];
+
+Write a function that when executed as findOddNames(list1) returns only the developers where
+if you add the ASCII representation of all characters in their FIRST names, the result will be an ODD number
+Explanation of the above:
+
+Sum of ASCII codes of letters in 'Aba' is: 65 + 98 + 97 = 260 which is an even number
+Sum of ASCII codes of letters in 'Abb' is: 65 + 98 + 98 = 261 which is an odd number
+Notes:
+
+Preserve the order of the original list.
+Return an empty array [] if there is no developer with an "odd" name.
+The input array and first names will always be valid and formatted as in the example above.
+ */
+
+//   MINE
+function findOddNames(list) {
+    let devAsciiFirstReducedIsOdd = []
+    list.forEach(el => {
+        if (firstNameIsOdd(el.firstName)) devAsciiFirstReducedIsOdd.push(el)
+    })
+    function firstNameIsOdd(name) {
+        return name.split('').reduce((acc, curr) => acc += curr.charCodeAt(0), 0) % 2 === 0 ? false : true;
+    }
+    return devAsciiFirstReducedIsOdd
+}
+
+//   BEST VOTED SOLUTION
+function findOddNames(list) {
+    return list.filter((d) => {
+        return d.firstName.split('').reduce(((r, e) => r + e.charCodeAt(0)), 0) % 2 !== 0
+    });
+}
+
+
+
+/* console.log(findOddNames([
+    { firstName: 'Aba', lastName: 'N.', country: 'Ghana', continent: 'Africa', age: 21, language: 'Python' },
+    { firstName: 'Abb', lastName: 'O.', country: 'Israel', continent: 'Asia', age: 39, language: 'Java' }
+])) */
