@@ -93,3 +93,12 @@ function findOddNames(list) {
     { firstName: 'Aba', lastName: 'N.', country: 'Ghana', continent: 'Africa', age: 21, language: 'Python' },
     { firstName: 'Abb', lastName: 'O.', country: 'Israel', continent: 'Asia', age: 39, language: 'Java' }
 ])) */
+
+// ------------------------ 12-2  -------------------------------------
+// Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
+
+let arr = document.querySelector('pre').textContent.replaceAll('\n\n', '-').split('-')
+arr.map(el => el.split('\n').map(el => Number(el)).reduce((acc, curr) => acc + curr))
+    .sort((a, b) => a - b)
+
+let top3Total = arr.slice(arr.length - 3).reduce((acc, curr) => acc + curr)
