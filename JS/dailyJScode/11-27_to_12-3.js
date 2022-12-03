@@ -94,7 +94,7 @@ function findOddNames(list) {
     { firstName: 'Abb', lastName: 'O.', country: 'Israel', continent: 'Asia', age: 39, language: 'Java' }
 ])) */
 
-// ------------------------ 12-2  -------------------------------------
+// ------------------------ 12-1 Advent 1 -------------------------------------
 // Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
 
 let arr = document.querySelector('pre').textContent.replaceAll('\n\n', '-').split('-')
@@ -102,3 +102,116 @@ arr.map(el => el.split('\n').map(el => Number(el)).reduce((acc, curr) => acc + c
     .sort((a, b) => a - b)
 
 let top3Total = arr.slice(arr.length - 3).reduce((acc, curr) => acc + curr)
+
+
+// ------------------------ 12-2 Advent 2 -------------------------------------
+// Rock Paper Scissors on Steroids - list of 2500 entries
+// -The score for a single round is the score for the shape you selected (1 for Rock, 2 for Paper, 
+//  and 3 for Scissors) plus the score for the outcome of the round (0 if you lost, 3 if the round was a draw, and 6 if you won).
+/* 
+a  x   1  rock
+b  y   2  paper
+c  z   3  scissors
+*/
+
+let list = document.querySelector('pre').textContent
+list = list.split('\n').map(el => el.split(' '))
+let checkWinArr = list.map(el => checkWhoWon(el[0], el[1]))
+let reduced = checkWinArr.reduce((acc, curr) => acc + curr)
+console.log(list)
+console.log(checkWinArr)
+console.log(reduced)
+
+function checkWhoWon(elf, me) {
+    switch (elf) {
+        case 'A': elf = 'rock';
+            break;
+        case 'B': elf = 'paper';
+            break;
+        case 'C': elf = 'scissors';
+            break;
+    }
+    switch (me) {
+        case 'X': me = 'rock';
+            break;
+        case 'Y': me = 'paper';
+            break;
+        case 'Z': me = 'scissors';
+            break;
+    }
+    console.log(elf, me)
+
+    let tally = !Number.isNaN(meHandPoints(me)) === true ? meHandPoints(me) : 0;
+    console.log(tally)
+    if ((elf === 'rock') && (me === 'scissors')) tally += 0;
+    else if ((elf === 'rock') && (me === 'paper')) tally += 6;
+    else if ((elf === 'paper') && (me === 'rock')) tally += 0;
+    else if ((elf === 'paper') && (me === 'scissors')) tally += 6;
+    else if ((elf === 'scissors') && (me === 'paper')) tally += 0;
+    else if ((elf === 'scissors') && (me === 'rock')) tally += 6;
+    else if (elf === me) tally += 3;   // tie
+    else tally += 0;
+    // console.log(tally)
+    return tally;
+}
+
+// helper function ;)
+function meHandPoints(me) {
+    return me === 'rock' ? 1 : me === 'paper' ? 2 : me === 'scissors' ? 3 : 0
+}
+
+
+// PART 2 OF ROCK PAPER SCISSORS
+/* "Anyway, the second column says how the round needs to end: X means you need to lose,
+ Y means you need to end the round in a draw, and Z means you need to win.Good luck!"
+ what would your total score be if everything goes exactly according to your strategy guide? */
+
+
+let list2 = document.querySelector('pre').textContent
+list2 = list2.split('\n').map(el => el.split(' '))
+let checkWinArr2 = list2.map(el => followSheet(el[0], el[1]))
+let reduced2 = checkWinArr2.reduce((acc, curr) => acc + curr)
+console.log(list2)
+console.log(checkWinArr2)
+console.log(reduced2)
+
+function followSheet(elf, xyz) {
+    switch (elf) {
+        case 'A': elf = 'rock';
+            break;
+        case 'B': elf = 'paper';
+            break;
+        case 'C': elf = 'scissors';
+            break;
+    }
+    switch (xyz) {
+        case 'X': xyz = 'lose';
+            break;
+        case 'Y': xyz = 'draw';
+            break;
+        case 'Z': xyz = 'win';
+            break;
+    }
+    let rock = 1, paper = 2, scissors = 3;
+
+    let tally2;
+    tally2 = xyz === 'lose' ? 0 : xyz === 'draw' ? 3 : xyz === 'win' ? 6 : 0
+
+    if ((elf === 'rock') && (xyz === 'lose')) tally2 += scissors;
+    else if ((elf === 'rock') && (xyz === 'draw')) tally2 += rock;
+    else if ((elf === 'rock') && (xyz === 'win')) tally2 += paper;
+    if ((elf === 'paper') && (xyz === 'lose')) tally2 += rock;
+    else if ((elf === 'paper') && (xyz === 'draw')) tally2 += paper;
+    else if ((elf === 'paper') && (xyz === 'win')) tally2 += scissors;
+    if ((elf === 'scissors') && (xyz === 'lose')) tally2 += paper;
+    else if ((elf === 'scissors') && (xyz === 'draw')) tally2 += scissors;
+    else if ((elf === 'scissors') && (xyz === 'win')) tally2 += rock;
+    else tally2 += 0;
+
+
+
+
+
+    // console.log(tally2)
+    return tally2;
+}
