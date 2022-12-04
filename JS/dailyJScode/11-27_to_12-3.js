@@ -304,26 +304,29 @@ console.log(groupOfThrees)
 
 let newGroupsOfThree = []
 
-groupOfThrees.map((el, x) => {
+groupOfThrees.forEach((el, i) => {
     let firstThird = el[0]
     let secondThird = el[1]
     let thirdThird = el[2]
 
-    for (x = 0; x < groupOfThrees.length; x += 3) {
+    for (let x = 0; x < groupOfThrees.length; x++) {
 
         if (secondThird.includes(firstThird[x]) && thirdThird.includes(firstThird[x])) {
 
-            console.log(`the letter @-- ${firstThird}-- ${secondThird}-- ${thirdThird}-- is ${el[0][x]} `)
+            console.log(`the letter for index ${i}, arrays: ${firstThird}-- ${secondThird}-- ${thirdThird}-- is ${el[0][x]} `)
             // console.log(checkPriority(el[0][x], getPrioritiesArr()))
             let pri = checkPriority(el[0][x], getPrioritiesArr())
-            newGroupsOfThree.push(!Number.isNaN(pri) ? pri : 0)
-
+            if (newGroupsOfThree[i] === undefined) {
+                newGroupsOfThree.push(!Number.isNaN(pri) ? pri : 0)
+            }
         }
 
     }
 })
 
-console.log(newGroupsOfThree.reduce((acc, curr) => acc + curr))
+console.log(newGroupsOfThree)
+
+// console.log(newGroupsOfThree.reduce((acc, curr) => acc + curr))
 
 
 
