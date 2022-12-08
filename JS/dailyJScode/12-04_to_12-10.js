@@ -1,5 +1,5 @@
-// ----------------- 12-04 ---------------------------
-/* 
+// ---------------------------- 12-04 ------------------------------------------------
+/*
 For example, consider the following list of section assignment pairs:
 
 2 - 4, 6 - 8
@@ -9,13 +9,13 @@ For example, consider the following list of section assignment pairs:
 6 - 6, 4 - 6
 2 - 6, 4 - 8
 
-Some of the pairs have noticed that one of their assignments fully contains the other. 
-For example, 2-8 fully contains 3-7, and 6-6 is fully contained by 4-6. In pairs where one assignment fully contains the other, 
-one Elf in the pair would be exclusively cleaning sections their partner will already be cleaning, so these seem like the most 
+Some of the pairs have noticed that one of their assignments fully contains the other.
+For example, 2-8 fully contains 3-7, and 6-6 is fully contained by 4-6. In pairs where one assignment fully contains the other,
+one Elf in the pair would be exclusively cleaning sections their partner will already be cleaning, so these seem like the most
 in need of reconsideration. In this example, there are 2 such pairs.
 
 In how many assignment pairs does one range fully contain the other? */
-
+/*
 function fillInNumsInRange(range) {
     // console.log(range.split('-'))
     range = range.split('-')
@@ -28,9 +28,9 @@ function fillInNumsInRange(range) {
 
 }
 
-let list = document.querySelector('pre').innerHTML.split('\n')
+let list = document.querySelector('p').innerHTML.split('\n')
 list = list.splice(0, list.length - 1)
-console.log(list)
+// console.log(list)
 let totalOverlapping = 0
 let listMutated = list.map((el, i) => {
     el = list[i].split(',')
@@ -39,16 +39,16 @@ let listMutated = list.map((el, i) => {
 
     el[0] = fillInNumsInRange(el[0]);
     el[1] = fillInNumsInRange(el[1]);
-    console.log(el[0])
-    console.log(el[1])
+    // console.log(el[0])
+    // console.log(el[1])
 
     if (el[0].includes(el[1]) || el[1].includes(el[0])) {
         totalOverlapping += 1
     }
-    console.log(totalOverlapping)
-    console.log('|')
+    // console.log(totalOverlapping)
+    // console.log('|')
     return el
-})
+}) */
 
 /* let totalOverlapping = 0
 listMutated.forEach((el) => {
@@ -57,11 +57,11 @@ listMutated.forEach((el) => {
     }
 })
 console.log(listMutated) */
-console.log(totalOverlapping)
+// console.log(totalOverlapping)
 // NOT SURE WHY NOT WORKING  -- this gives me answer of 652,   answer should be 644
 // here is someone's solution that worked
 
-document
+/* document
     .querySelector('pre')
     .innerText.split('\n')
     .filter(e => e !== '')
@@ -73,3 +73,32 @@ document
     })
     .filter(contained => contained)
     .length;
+ */
+
+
+// ---------------------------- 12-08  6kyu------------------------------------------------
+/*  In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+If anything in the text isn't a letter, ignore it and don't return it.
+
+"a" = 1, "b" = 2, etc. */
+
+function alphabetPosition(text) {
+    let list = 'abcdefghijklmnopqrstuvwxyz'.split('')
+
+    text = text.toLowerCase().split('')
+        .filter(el => isNaN(el))
+
+        .map(el => {
+            let check = list.indexOf(el) + 1
+
+            return check === -1 ? el : check
+        })
+        .filter(el => !isNaN(el) && el !== ' ' && el !== 0)
+        .join(' ')
+
+    return text
+}
+
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+// console.log(alphabetPosition("y5<{ic)f"))
