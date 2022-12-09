@@ -121,9 +121,9 @@ function tribonacci(sig, n) {
     return sig
 }
 
-console.log(tribonacci([1, 1, 1], 10))   // [1,1,1,3,5,9,17,31,57,105]
+/* console.log(tribonacci([1, 1, 1], 10))   // [1,1,1,3,5,9,17,31,57,105]
 console.log(tribonacci([0, 0, 1], 10))  //  [0,0,1,1,2,4,7,13,24,44]  
-console.log(tribonacci([0, 0, 1], 2))  //  [0,0,1,1,2,4,7,13,24,44]  
+console.log(tribonacci([0, 0, 1], 2))  //  [0,0,1,1,2,4,7,13,24,44]   */
 
 // best voted solution is like mine, but cleaner
 function tribonacci2(signature, n) {
@@ -131,4 +131,35 @@ function tribonacci2(signature, n) {
         signature.push(signature[i] + signature[i + 1] + signature[i + 2]); // add last 3 array items and push to trib
     }
     return signature.slice(0, n); //return trib - length of n
+}
+
+
+//    ----------------- 12-09   7kyu --------------------------------
+
+/* create a program that removes any unneccessary characters and return the corrected list.
+The expected characters are digits, ' $ ', and ' . ' All items in the returned list are expected to be strings.
+
+For example:
+a1 = ['$5.$6.6x.s4', '{$33ae.5(9', '$29..4e9', '%.$9|4d20', 'A$AA$4r R4.94']
+remove_char(a1) 
+>>> ['$56.64', '$33.59', '$29.49', '$94.20', '$44.94'] */
+
+console.log(removeExtraChar(['$5.$6.6x.s4', '{$33ae.5(9', '$29..4e9', '%.$9|4d20', 'A$AA$4r R4.94']))
+
+function removeExtraChar(arr) {
+
+    arr = arr.map(str => {
+
+        str = str.split('').slice(str.indexOf('$'))
+
+            .filter(el => el !== ' ')  // starting string from first bling
+        str = str
+            .filter((el, i) => !isNaN(Number(el))
+                || i === str.indexOf('.')
+            ).join('') //left here!! 
+        console.log(str)
+        return str = '$' + str
+
+    })
+    return arr
 }
