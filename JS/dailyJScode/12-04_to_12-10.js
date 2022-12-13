@@ -144,7 +144,6 @@ a1 = ['$5.$6.6x.s4', '{$33ae.5(9', '$29..4e9', '%.$9|4d20', 'A$AA$4r R4.94']
 remove_char(a1) 
 >>> ['$56.64', '$33.59', '$29.49', '$94.20', '$44.94'] */
 
-console.log(removeExtraChar(['$5.$6.6x.s4', '{$33ae.5(9', '$29..4e9', '%.$9|4d20', 'A$AA$4r R4.94']))
 
 function removeExtraChar(arr) {
 
@@ -163,3 +162,4 @@ function removeExtraChar(arr) {
     })
     return arr
 }
+// console.log(removeExtraChar(['$5.$6.6x.s4', '{$33ae.5(9', '$29..4e9', '%.$9|4d20', 'A$AA$4r R4.94']))
