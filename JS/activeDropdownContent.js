@@ -91,7 +91,7 @@ $(document).ready(function () {
     let insertLibraryValueToDom = function (val) {
         document.querySelector('#libraryTimeResult').innerText = openingTimes(val)
     }
-    libraryTimeButton.addEventListener('click', insertLibraryValueToDom)
+    document.querySelector('#libraryTimeButton').addEventListener('click', () => insertLibraryValueToDom(libraryTimeInput.value))
 
     //---------------------------------------------------------------------------------------------------------
     // ------------------            11-10          ----------------------------------------------------
