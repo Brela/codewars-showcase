@@ -341,9 +341,10 @@ License: none (public domain)
    }
 
    button {
-       min-width: 100px;
+       font-size: 20px;
+       min-width: 80px;
        width: auto;
-       height: 2em;
+       height: 1.6em;
        background: rgb(170, 180, 163);
    }
 
@@ -359,10 +360,10 @@ License: none (public domain)
        background: rgb(247, 158, 42);
    }
 
-   .assignmentParagraph {
+   .assignmentParagraph p {
 
        margin: auto 10%;
-       line-height: 1.3em;
+       line-height: 1.1em;
    }
 
    .assignmentSmallerText {

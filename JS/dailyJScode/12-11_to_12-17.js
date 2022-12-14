@@ -99,17 +99,13 @@ function openingTimes(str) {
         saturday: { open: 1000, close: 1800 },
         sunday: { open: 1200, close: 1630 },
     }
-
     str = str.toLowerCase().split(' ')
     let day = str[0]; let time = str[1]
     time = Number(time.split(':').join(''))         // turn time into a number
     if (!verifyDayIsValid(day) || !verifyTimeIsValid(str[1])) {
         return "Invalid time!"
     }
-
     let open = hours[day].open, close = hours[day].close   //get open and close from hours object
-
-
     // if time is before today's opening time, return today's opening time
     if (time < open) return `Library opens: today ${convertNumToTime(open)}`
     // if time is between current day's open and closing time, return closing time
@@ -128,7 +124,6 @@ function openingTimes(str) {
         x.splice(2, 0, ":")
         return x.join('')
     }
-
     function findWhatDayTomorrowIs(day) {
         if (day === 'sunday') return 'monday'
         let keys = Object.keys(hours);
@@ -136,7 +131,6 @@ function openingTimes(str) {
         let nextDay = keys[nextIndex];
         return nextDay
     }
-
     function capitalizeFirstLetter(word) {
         word = word.split('')
         word[0] = word[0].toUpperCase()
@@ -150,7 +144,6 @@ function openingTimes(str) {
     function verifyTimeIsValid(time) {
         time = time.split(':')
         let checkHours = time[0]; let checkMins = time[1]
-
         if ((checkHours > 24) || (checkMins > 59) || (checkHours == 24 && checkMins >= 0)) {
             return false
         } else return true

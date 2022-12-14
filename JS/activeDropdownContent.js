@@ -10,27 +10,101 @@ $(document).ready(function () {
             })
         })
     }
+    // checks if keyhit was enterKey and returns the function to be activated with the input value as it's parameter
+    function checkKeycode(event, input, funcToBeActivated) {
+        let keyCode = event.keyCode ? event.keyCode : event.which;
+        if (keyCode === 13) {
+            return funcToBeActivated(input.value);
+        }
+    }
+    // I wanted to consoldate the 'make function happen on enter key' functions into one. 
+    // To do this I have to pass the function to be executed as a parameter (callback function)
+    // and therfore had to make each of those code blocks as a function expression to be passed an arg
+    // so for these ones that utilize this 'checkKeycode funciton' the code that activates them and inserts to dom is below the code block for that day
 
     //---------------------------------------------------------------------------------------------------------
-    // ------------------            11-          ----------------------------------------------------
-    /*    let Input = document.querySelector('#Input')
-       Input.addEventListener('keypress', (event) => {
-           let keyCode = event.keyCode ? event.keyCode : event.which;
-           if (keyCode === 13) {
-               return accum(Input.value);
-           }
-       }); */
+    // ------------------            12-13          ----------------------------------------------------
+
+    let openingTimes = function (str) {
+        const hours = {
+            monday: { open: 0800, close: 2000 },
+            tuesday: { open: 0800, close: 2000 },
+            wednesday: { open: 0800, close: 2000 },
+            thursday: { open: 0800, close: 2000 },
+            friday: { open: 0800, close: 2000 },
+            saturday: { open: 1000, close: 1800 },
+            sunday: { open: 1200, close: 1630 },
+        }
+        str = str.toLowerCase().split(' ')
+        let day = str[0]; let time = str[1]
+        time = Number(time.split(':').join(''))         // turn time into a number
+        if (time.length === 3) time.unshift('0')
+        if (!verifyDayIsValid(day)) return "Invalid day"
+        if (!verifyTimeIsValid(str[1])) return "Invalid time"
+        let open = hours[day].open, close = hours[day].close   //get open and close from hours object
+        // if time is before today's opening time, return today's opening time
+        if (time < open) return `Library opens: today ${convertNumToTime(open)}`
+        // if time is between current day's open and closing time, return closing time
+        if (open < time && time < close) return `Library closes at ${convertNumToTime(close)}`
+        // if time is after today's closing time, return tomorrow's (num +1) opening time
+        if (close <= time) {
+            let tomorrow = findWhatDayTomorrowIs(day)
+            let tomorrowCapitalized = capitalizeFirstLetter(tomorrow)
+            let openTime = convertNumToTime(hours[tomorrow].open)
+            return `Library opens: ${tomorrowCapitalized} ${openTime}`
+        }
+        // fucntion to turn a number like 2000 to a time 20:00
+        function convertNumToTime(n) {
+            let x = String(n).split('')
+            if (x.length === 3) x.unshift('0')
+            x.splice(2, 0, ":")
+            return x.join('')
+        }
+        function findWhatDayTomorrowIs(day) {
+            if (day === 'sunday') return 'monday'
+            let keys = Object.keys(hours);
+            let nextIndex = keys.indexOf(day) + 1;
+            let nextDay = keys[nextIndex];
+            return nextDay
+        }
+        function capitalizeFirstLetter(word) {
+            word = word.split('')
+            word[0] = word[0].toUpperCase()
+            return word.join('')
+        }
+        function verifyDayIsValid(day) {
+            let keys = Object.keys(hours);
+            // console.log('is day valid? ' + day + ' ' + keys.some(el => el === day))
+            return keys.some(el => el === day)
+        }
+        function verifyTimeIsValid(time) {
+            time = time.split(':')
+            let checkHours = time[0]; let checkMins = time[1]
+            if ((checkHours > 24) || (checkMins > 59) || (checkHours == 24 && checkMins >= 0)) {
+                return false
+            } else return true
+        }
+    }
+
+    let libraryTimeInput = document.querySelector('#libraryTimeInput')
+    libraryTimeInput.addEventListener('keypress', (event) => checkKeycode(event, libraryTimeInput, insertLibraryValueToDom))
+    let insertLibraryValueToDom = function (val) {
+        document.querySelector('#libraryTimeResult').innerText = openingTimes(val)
+    }
+    libraryTimeButton.addEventListener('click', insertLibraryValueToDom)
 
     //---------------------------------------------------------------------------------------------------------
     // ------------------            11-10          ----------------------------------------------------
     let stringWithDashesInput = document.querySelector('#stringWithDashesInput')
-    stringWithDashesInput.addEventListener('keypress', (event) => {
-        let keyCode = event.keyCode ? event.keyCode : event.which;
-        if (keyCode === 13) {
-            return accum(stringWithDashesInput.value);
-        }
-    });
-    function accum(s) {
+    stringWithDashesInput.addEventListener('keypress', (event) => checkKeycode(event, stringWithDashesInput, accum))
+
+    /*   (event) => {
+          let keyCode = event.keyCode ? event.keyCode : event.which;
+          if (keyCode === 13) {
+              return accum(stringWithDashesInput.value);
+          }
+      }); */
+    let accum = function (s) {
         let stringWithDashesAnswer = s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
         document.querySelector('#stringWithDashesResult').innerText = stringWithDashesAnswer
     }
