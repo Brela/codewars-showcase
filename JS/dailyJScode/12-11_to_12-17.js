@@ -72,7 +72,7 @@ Sunday:  12:00 - 16:30
 
 
 
-cl(openingTimes("Monday 24:30")); //returns "Library closes at 20:00"
+/* cl(openingTimes("Monday 24:30")); //returns "Library closes at 20:00"
 cl('----')
 cl(openingTimes("Saturday 00:00")); //returns "Library opens: today 10:00"
 cl('----')
@@ -82,11 +82,11 @@ cl(openingTimes("MoNDay 07:59")); //returns "Library opens: today 08:00"
 cl('----')
 cl(openingTimes("Tuesday 13:61")); //returns "Invalid time!"
 cl('----')
-cl(openingTimes("wednsay 12:40")); //returns "Invalid time!" */
+cl(openingTimes("wednsay 12:40")); //returns "Invalid time!" 
 cl('----')
-cl(openingTimes("wednesday 12:40")); //returns "Invalid time!" */
+cl(openingTimes("wednesday 12:40")); //returns "Invalid time!" 
 cl('----')
-
+     */
 
 function openingTimes(str) {
     cl(str)
@@ -150,4 +150,52 @@ function openingTimes(str) {
     }
 }
 
-// tomorrow let's get this working with an input
+
+
+////////////////////////// 12-15 5kyu////////////////////////////////
+/* The marketing team is spending way too much time typing in hashtags.
+Let's help them with our own Hashtag Generator!
+
+Here's the deal:
+
+It must start with a hashtag (#).
+All words must have their first letter capitalized.
+If the final result is longer than 140 chars it must return false.
+If the input or the result is an empty string it must return false.
+Examples
+" Hello there thanks for trying my Kata"  =>  "#HelloThereThanksForTryingMyKata"
+"    Hello     World   "                  =>  "#HelloWorld"
+""                                        =>  false */
+
+console.log(generateHashtag("You are going to succeed"))
+console.log(generateHashtag(" burning desire"))
+
+// MINE
+function generateHashtag(str) {
+    if (str === '') return false
+    str = str.split(' ').filter(el => el !== '')
+        .map(word => capitalizeFirstLetter(word))
+    str.unshift('#')
+    console.log(str)
+    str = str.join('')
+
+    function capitalizeFirstLetter(word) {
+        word = word.split('')
+        word[0] = word[0].toUpperCase()
+        return word.join('')
+    }
+
+    if (str.length > 140 || str === '' || str === '#') return false
+    return str
+}
+
+// BEST VOTED
+function generateHashtag(str) {
+    if (!str || str.length < 1) return false;
+
+    var r = '#' + str.split(' ').map(function (el) {
+        return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
+    }).join('');
+    return r.length > 140 ? false : r;
+}
+//----------------------------------------------------------------------------------------

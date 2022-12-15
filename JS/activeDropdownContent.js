@@ -14,6 +14,7 @@ $(document).ready(function () {
     function checkKeycode(event, input, funcToBeActivated) {
         let keyCode = event.keyCode ? event.keyCode : event.which;
         if (keyCode === 13) {
+            console.log(funcToBeActivated)
             return funcToBeActivated(input.value);
         }
     }
@@ -21,6 +22,24 @@ $(document).ready(function () {
     // To do this I have to pass the function to be executed as a parameter (callback function)
     // and therfore had to make each of those code blocks as a function expression to be passed an arg
     // so for these ones that utilize this 'checkKeycode funciton' the code that activates them and inserts to dom is below the code block for that day
+
+
+    //---------------------------------------------------------------------------------------------------------
+    // ------------------            12-15          ----------------------------------------------------
+
+    function hashtagGenerator(str) {
+        if (!str || str.length < 1) return false;
+        var r = '#' + str.split(' ').map(function (el) {
+            return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
+        }).join('');
+        return r.length > 140 ? false : r;
+    }
+    let hashtagGeneratorInput = document.querySelector('#hashtagGeneratorInput')
+    hashtagGeneratorInput.addEventListener('keypress', (event) => checkKeycode(event, hashtagGeneratorInput, insertHashtagGeneratorValueToDom))
+    let insertHashtagGeneratorValueToDom = function (val) {
+        document.querySelector('#hashtagGeneratorResult').innerText = hashtagGenerator(val)
+    }
+    document.querySelector('#hashtagGeneratorButton').addEventListener('click', () => insertHashtagGeneratorValueToDom(hashtagGeneratorInput.value))
 
     //---------------------------------------------------------------------------------------------------------
     // ------------------            12-13          ----------------------------------------------------
