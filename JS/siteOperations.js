@@ -5,21 +5,21 @@ $(document).ready(function () {
         event.preventDefault();
     });
 
-    // ------  need to fix bug where preview of selected item goes away 
-    // ----------(like it should) but then comes back on mouse move 
-
     //-------------------------------------------------------------------------------------------------------------
 
     const itemList = document.querySelectorAll('.dropdown')
 
     //-------------------------------------------------------------------------------------------------------------
-    //this section is for showing a preview of list item's content on devices above 1000px
+    // For devices above 1000px wide:  show preview of content on hover
     if ($(window).width() > 1000) {
-
+        // When the mouse enters a list item:
         itemList.forEach((el, index) => el.addEventListener('mouseenter', () => {
             var aID = itemList[index].id
             var xClass = '.' + aID.replace(aID[0], 'x')
-
+            /*  the code selects the corresponding .dropdown-content element
+             and adds the dropdown-content-preview class to it. This class is used to 
+            style the preview, making it visible to the user. When the mouse leaves the list item, 
+            the dropdown-content-preview class is removed, hiding the preview. */
             document.querySelector(xClass).classList.toggle('dropdown-content-preview')
             document.querySelector('.stick').classList.remove('dropdown-content-preview')
         }))
